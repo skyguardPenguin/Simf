@@ -6,26 +6,36 @@ using System.Threading.Tasks;
 
 namespace PseudoGen
 {
-    class Generador
+    public class Generador
     {
-        int X0,a,c,m;
+        int X0,a,c,m,limite;
         public int[] Xn;
        
         public double[] Nums;
-        public object[,] rows;
+        public double[,] Rows;
 
-        public Generador(int X0,int a, int c, int m)
+        public Generador(int X0,int a, int c, int m, int limite)
         {
             this.X0 = X0;
             this.a = a;
             this.c = c;
             this.m = m;
+            this.limite = limite;
+            if (limite == 0)
+            {
+                this.limite = m;
+                Xn = new int[m + 1];
 
-            Xn = new int[m+1];
-           
-            Nums = new double[m+1];
+                Nums = new double[m + 1];
 
-            rows = new object[m+1, 3];
+                Rows = new double[m + 1, 3];
+            }
+            else
+            {
+                Xn = new int[limite + 1];
+                Nums = new double[limite + 1];
+                Rows = new double[limite + 1, 3];
+            }
             Calcular();
         }
 
@@ -33,16 +43,15 @@ namespace PseudoGen
         {
             Xn[0] = X0;
             
-            for(int i =0;i<m+1;i++)
+            for(int i =0;i<limite+1;i++)
             {
-                if (i <m )
+                if (i <limite )
                 {
                     Xn[i + 1] = (a * Xn[i] + c)%m;
                     Nums[i] = (double)Xn[i + 1]/(double)m;
-                    Nums[i]=Math.Round(Nums[i],5);
-                    rows[i, 0] = Xn[i];
-                    rows[i, 1] = Xn[i + 1];
-                    rows[i, 2] = Nums[i];
+                    Rows[i, 0] = Xn[i];
+                    Rows[i, 1] = Xn[i + 1];
+                    Rows[i, 2] = Nums[i];
 
                 }
                
