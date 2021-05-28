@@ -11,7 +11,7 @@ namespace PseudoGen
 {
 
 
-
+    //Colores personalizados para el MenuBar
     public class PSAGenColorTable : ProfessionalColorTable
     {
         public override Color ToolStripDropDownBackground

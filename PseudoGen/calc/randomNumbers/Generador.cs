@@ -8,7 +8,7 @@ namespace PseudoGen
 {
     public class Generador
     {
-        int X0,a,c,m,limite;
+        public int X0,a,c,m,limite;
         public int[] Xn;
        
         public double[] Nums;
