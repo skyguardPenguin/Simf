@@ -317,6 +317,11 @@ namespace PseudoGen
 
         }
 
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //Abre la ventana de detalles del método de los promedios
         private void FlatButtonPromCheck_Click(object sender, EventArgs e)
         {
