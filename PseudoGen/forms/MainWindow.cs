@@ -1,4 +1,5 @@
 ﻿using Bunifu.Framework.UI;
+using PseudoGen.calc.randomNumbers.proofs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,17 +18,17 @@ namespace PseudoGen
 
         Generador Gen;
         Promedios Proms;
+        KolmogorovSmirnov Smirnov;
         int X0, a, c, m;
-
+        
         public MainWindow()
         {
 
             InitializeComponent();
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new PSAGenColorTable());
-            tabControl.CloseButtonForeColor = SystemColors.Control;
-            tabControl.CloseButtonBackColor = SystemColors.Control;
-            textBDecimales.Text = "4";
 
+            textBDecimales.Text = "4";
+           
 
         }
     #region MainBar
@@ -237,6 +238,8 @@ namespace PseudoGen
                 {
                     dataGridView1.Rows.Add(i, Gen.Rows[i, 0], Gen.Rows[i, 1], Math.Round(Gen.Rows[i, 2], int.Parse(textBDecimales.Text)));
                 }
+                if (dataGridView1.Rows.Count < 12)
+                    dataGridView1.Rows.Add(12 - dataGridView1.Rows.Count);
 
             }
         }
@@ -283,7 +286,7 @@ namespace PseudoGen
                 m = int.Parse(TextBoxM.Text);
                 Gen = new Generador(X0, a, c, m, limite);
                 Proms = new Promedios(Gen);
-
+                Smirnov = new KolmogorovSmirnov(Gen);
 
                 for (int i = 0; i < Gen.Nums.Length - 1; i++)
                     dataGridView1.Rows.Add(i, Gen.Rows[i, 0], Gen.Rows[i, 1], Math.Round(Gen.Rows[i, 2], 7));
@@ -293,7 +296,7 @@ namespace PseudoGen
 
 
                 FlatButtonPromCheck.Visible = true;
-
+                flatButtonSmirnovCheck.Visible = true;
 
                 if (Proms.H0)
                 {
@@ -308,11 +311,23 @@ namespace PseudoGen
 
                     FlatButtonPromCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\cancel_48px.png"));
 
+
                 }
+                string[] text = comboBAlfa.Text.Split('%');
+     
+                flatButtonSmirnovCheck.Text = Smirnov.Result(double.Parse(text[0]))+ ". Click para ver detalles.";
+                if(!Smirnov.UniformementeDistribuidos)
+                    flatButtonSmirnovCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\cancel_48px.png"));
+                else
+                    flatButtonSmirnovCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\ok_48px.png"));
+
+
             }
-            catch
+
+            catch (Exception ex)
             {
                 MessageBox.Show("Los datos introducidos están incompletos o incorrectos, asegurese de insertar números enteros y rellenar todos los campos requeridos. ");
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -322,11 +337,43 @@ namespace PseudoGen
 
         }
 
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void flatButtonSmirnovCheck_Click(object sender, EventArgs e)
+        {
+            SmirnovMetodo smirnovMetodo = new SmirnovMetodo(Gen,Smirnov);
+            smirnovMetodo.Show();
+            smirnovMetodo.Disposed += smirnovWindow_Dispose;
+        }
+        private void smirnovWindow_Dispose(object sender, EventArgs e)
+        {
+            comboBAlfa.Text = Smirnov.Alfa.ToString() + "%";
+            flatButtonSmirnovCheck.Text = Smirnov.conclusion + ". Click para ver detalles";
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
+
         //Abre la ventana de detalles del método de los promedios
         private void FlatButtonPromCheck_Click(object sender, EventArgs e)
         {
             DetallePromedios detallePromedios = new DetallePromedios(Gen, Proms, X0, a, m, c);
             detallePromedios.Show();
+
+          
+
         }
         //Abre la ventana de detalles del método de los promedios
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -338,6 +385,7 @@ namespace PseudoGen
         //Abre la exportación de datos a excel
         private void jhjToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             Export.Excel.PromExcelExport promExcleExp = new Export.Excel.PromExcelExport(Gen);
             promExcleExp.OpenWindow();
         }

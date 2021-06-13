@@ -17,9 +17,9 @@ namespace PseudoGen
         Promedios Prom;
         int X0, a, m, c;
 
+       
 
-
-
+        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 

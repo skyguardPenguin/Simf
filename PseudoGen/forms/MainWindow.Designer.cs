@@ -31,10 +31,10 @@ namespace PseudoGen
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.butCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,13 +46,17 @@ namespace PseudoGen
             this.label1 = new System.Windows.Forms.Label();
             this.butMinimizar = new Bunifu.Framework.UI.BunifuImageButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.okImageLimite = new System.Windows.Forms.PictureBox();
             this.textBDecimales = new System.Windows.Forms.TextBox();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBAlfa = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.labelErrorLimite = new System.Windows.Forms.Label();
@@ -71,7 +75,6 @@ namespace PseudoGen
             this.TextboxX0 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.okImageLimite = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnXn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,8 +83,8 @@ namespace PseudoGen
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.flatButtonSmirnovCheck = new Bunifu.Framework.UI.BunifuFlatButton();
             this.FlatButtonPromCheck = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.imageErrorLimite = new System.Windows.Forms.PictureBox();
             this.OkImageX0 = new System.Windows.Forms.PictureBox();
             this.ErrorImageX0 = new System.Windows.Forms.PictureBox();
@@ -91,20 +94,20 @@ namespace PseudoGen
             this.OkImageC = new System.Windows.Forms.PictureBox();
             this.ErrorImageM = new System.Windows.Forms.PictureBox();
             this.OkImageM = new System.Windows.Forms.PictureBox();
-            this.tabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.butCerrar)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.menuBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.butMinimizar)).BeginInit();
-            this.tabPageAdv1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.okImageLimite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.okImageLimite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -117,8 +120,6 @@ namespace PseudoGen
             ((System.ComponentModel.ISupportInitialize)(this.OkImageC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorImageM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OkImageM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
-            this.tabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // butCerrar
@@ -127,7 +128,7 @@ namespace PseudoGen
             this.butCerrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.butCerrar.Image = ((System.Drawing.Image)(resources.GetObject("butCerrar.Image")));
             this.butCerrar.ImageActive = null;
-            this.butCerrar.Location = new System.Drawing.Point(777, 0);
+            this.butCerrar.Location = new System.Drawing.Point(852, 1);
             this.butCerrar.Name = "butCerrar";
             this.butCerrar.Size = new System.Drawing.Size(43, 24);
             this.butCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -196,7 +197,7 @@ namespace PseudoGen
             this.menuBarPanel.Controls.Add(this.menuStrip1);
             this.menuBarPanel.Location = new System.Drawing.Point(0, 0);
             this.menuBarPanel.Name = "menuBarPanel";
-            this.menuBarPanel.Size = new System.Drawing.Size(820, 30);
+            this.menuBarPanel.Size = new System.Drawing.Size(900, 30);
             this.menuBarPanel.TabIndex = 5;
             this.menuBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuBarPanel_MouseDown);
             // 
@@ -216,7 +217,7 @@ namespace PseudoGen
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(353, 5);
+            this.label1.Location = new System.Drawing.Point(422, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 33;
@@ -228,7 +229,7 @@ namespace PseudoGen
             this.butMinimizar.Cursor = System.Windows.Forms.Cursors.Default;
             this.butMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("butMinimizar.Image")));
             this.butMinimizar.ImageActive = null;
-            this.butMinimizar.Location = new System.Drawing.Point(733, 0);
+            this.butMinimizar.Location = new System.Drawing.Point(803, 1);
             this.butMinimizar.Name = "butMinimizar";
             this.butMinimizar.Size = new System.Drawing.Size(43, 24);
             this.butMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -242,60 +243,76 @@ namespace PseudoGen
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // tabPageAdv1
+            // tabControl1
             // 
-            this.tabPageAdv1.Controls.Add(this.textBDecimales);
-            this.tabPageAdv1.Controls.Add(this.bunifuImageButton2);
-            this.tabPageAdv1.Controls.Add(this.bunifuImageButton1);
-            this.tabPageAdv1.Controls.Add(this.panel5);
-            this.tabPageAdv1.Controls.Add(this.panel4);
-            this.tabPageAdv1.Controls.Add(this.okImageLimite);
-            this.tabPageAdv1.Controls.Add(this.dataGridView1);
-            this.tabPageAdv1.Controls.Add(this.panel2);
-            this.tabPageAdv1.Controls.Add(this.imageErrorLimite);
-            this.tabPageAdv1.Controls.Add(this.OkImageX0);
-            this.tabPageAdv1.Controls.Add(this.ErrorImageX0);
-            this.tabPageAdv1.Controls.Add(this.OkImageA);
-            this.tabPageAdv1.Controls.Add(this.ErrorImageA);
-            this.tabPageAdv1.Controls.Add(this.ErrorImageC);
-            this.tabPageAdv1.Controls.Add(this.OkImageC);
-            this.tabPageAdv1.Controls.Add(this.ErrorImageM);
-            this.tabPageAdv1.Controls.Add(this.OkImageM);
-            this.tabPageAdv1.ForeColor = System.Drawing.SystemColors.Control;
-            this.tabPageAdv1.Image = null;
-            this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(1, 25);
-            this.tabPageAdv1.Name = "tabPageAdv1";
-            this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(817, 543);
-            this.tabPageAdv1.TabForeColor = System.Drawing.SystemColors.Control;
-            this.tabPageAdv1.TabIndex = 1;
-            this.tabPageAdv1.Text = "tabPage";
-            this.tabPageAdv1.ThemesEnabled = false;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 30);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(900, 600);
+            this.tabControl1.TabIndex = 6;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Black;
+            this.tabPage1.Controls.Add(this.okImageLimite);
+            this.tabPage1.Controls.Add(this.textBDecimales);
+            this.tabPage1.Controls.Add(this.bunifuImageButton2);
+            this.tabPage1.Controls.Add(this.bunifuImageButton1);
+            this.tabPage1.Controls.Add(this.panel5);
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.imageErrorLimite);
+            this.tabPage1.Controls.Add(this.OkImageX0);
+            this.tabPage1.Controls.Add(this.ErrorImageX0);
+            this.tabPage1.Controls.Add(this.OkImageA);
+            this.tabPage1.Controls.Add(this.ErrorImageA);
+            this.tabPage1.Controls.Add(this.ErrorImageC);
+            this.tabPage1.Controls.Add(this.OkImageC);
+            this.tabPage1.Controls.Add(this.ErrorImageM);
+            this.tabPage1.Controls.Add(this.OkImageM);
+            this.tabPage1.Controls.Add(this.panel4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(892, 574);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // okImageLimite
+            // 
+            this.okImageLimite.Image = ((System.Drawing.Image)(resources.GetObject("okImageLimite.Image")));
+            this.okImageLimite.Location = new System.Drawing.Point(265, 415);
+            this.okImageLimite.Name = "okImageLimite";
+            this.okImageLimite.Size = new System.Drawing.Size(28, 28);
+            this.okImageLimite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.okImageLimite.TabIndex = 64;
+            this.okImageLimite.TabStop = false;
+            this.okImageLimite.Visible = false;
             // 
             // textBDecimales
             // 
             this.textBDecimales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.textBDecimales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBDecimales.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBDecimales.Location = new System.Drawing.Point(751, 64);
+            this.textBDecimales.Location = new System.Drawing.Point(818, 65);
             this.textBDecimales.Name = "textBDecimales";
             this.textBDecimales.Size = new System.Drawing.Size(25, 20);
-            this.textBDecimales.TabIndex = 46;
+            this.textBDecimales.TabIndex = 63;
             this.textBDecimales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBDecimales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBDecimales_KeyPress);
-            this.textBDecimales.Leave += new System.EventHandler(this.textBDecimales_Leave);
             // 
             // bunifuImageButton2
             // 
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(730, 67);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(797, 67);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(15, 15);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton2.TabIndex = 45;
+            this.bunifuImageButton2.TabIndex = 62;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
             this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
@@ -305,11 +322,11 @@ namespace PseudoGen
             this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(782, 67);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(849, 67);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(15, 15);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton1.TabIndex = 44;
+            this.bunifuImageButton1.TabIndex = 61;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click_1);
@@ -318,10 +335,10 @@ namespace PseudoGen
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.panel5.Controls.Add(this.bunifuCustomLabel6);
-            this.panel5.Location = new System.Drawing.Point(354, 16);
+            this.panel5.Location = new System.Drawing.Point(-1, -235);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(453, 40);
-            this.panel5.TabIndex = 41;
+            this.panel5.Size = new System.Drawing.Size(533, 40);
+            this.panel5.TabIndex = 60;
             // 
             // bunifuCustomLabel6
             // 
@@ -329,7 +346,7 @@ namespace PseudoGen
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Arial Narrow", 15F);
             this.bunifuCustomLabel6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(201, 10);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(240, 10);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(77, 24);
             this.bunifuCustomLabel6.TabIndex = 18;
@@ -338,6 +355,8 @@ namespace PseudoGen
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.comboBAlfa);
+            this.panel4.Controls.Add(this.bunifuCustomLabel7);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.labelErrorLimite);
             this.panel4.Controls.Add(this.TextBoxLimitar);
@@ -355,10 +374,42 @@ namespace PseudoGen
             this.panel4.Controls.Add(this.TextboxX0);
             this.panel4.Controls.Add(this.bunifuCustomLabel3);
             this.panel4.Controls.Add(this.bunifuCustomLabel4);
-            this.panel4.Location = new System.Drawing.Point(16, 16);
+            this.panel4.Location = new System.Drawing.Point(6, 17);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(252, 510);
-            this.panel4.TabIndex = 40;
+            this.panel4.Size = new System.Drawing.Size(252, 544);
+            this.panel4.TabIndex = 59;
+            // 
+            // comboBAlfa
+            // 
+            this.comboBAlfa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.comboBAlfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBAlfa.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBAlfa.FormattingEnabled = true;
+            this.comboBAlfa.Items.AddRange(new object[] {
+            ".1%",
+            ".2%",
+            ".5%",
+            "1%",
+            "2%",
+            "5%",
+            "10%",
+            "20%"});
+            this.comboBAlfa.Location = new System.Drawing.Point(110, 463);
+            this.comboBAlfa.Name = "comboBAlfa";
+            this.comboBAlfa.Size = new System.Drawing.Size(142, 21);
+            this.comboBAlfa.TabIndex = 40;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Arial", 12F);
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(0, 463);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(99, 18);
+            this.bunifuCustomLabel7.TabIndex = 39;
+            this.bunifuCustomLabel7.Text = "Valor de alfa:";
             // 
             // panel1
             // 
@@ -429,7 +480,6 @@ namespace PseudoGen
             this.checkBoxLimitar.TabIndex = 34;
             this.checkBoxLimitar.Text = "Limitar cantidad de números";
             this.checkBoxLimitar.UseVisualStyleBackColor = true;
-            this.checkBoxLimitar.CheckedChanged += new System.EventHandler(this.checkBoxLimitar_CheckedChanged);
             // 
             // labelErrorM
             // 
@@ -474,7 +524,7 @@ namespace PseudoGen
             this.ButGenerar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
             this.ButGenerar.ActiveForecolor = System.Drawing.Color.White;
             this.ButGenerar.ActiveLineColor = System.Drawing.SystemColors.ButtonFace;
-            this.ButGenerar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButGenerar.BackColor = System.Drawing.Color.Black;
             this.ButGenerar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButGenerar.BackgroundImage")));
             this.ButGenerar.ButtonText = "Generar";
             this.ButGenerar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -486,7 +536,7 @@ namespace PseudoGen
             this.ButGenerar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.ButGenerar.IdleForecolor = System.Drawing.SystemColors.ButtonFace;
             this.ButGenerar.IdleLineColor = System.Drawing.SystemColors.ButtonFace;
-            this.ButGenerar.Location = new System.Drawing.Point(0, 460);
+            this.ButGenerar.Location = new System.Drawing.Point(0, 494);
             this.ButGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButGenerar.Name = "ButGenerar";
             this.ButGenerar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -643,68 +693,57 @@ namespace PseudoGen
             this.bunifuCustomLabel4.TabIndex = 15;
             this.bunifuCustomLabel4.Text = "m";
             // 
-            // okImageLimite
-            // 
-            this.okImageLimite.Image = ((System.Drawing.Image)(resources.GetObject("okImageLimite.Image")));
-            this.okImageLimite.Location = new System.Drawing.Point(275, 414);
-            this.okImageLimite.Name = "okImageLimite";
-            this.okImageLimite.Size = new System.Drawing.Size(28, 28);
-            this.okImageLimite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.okImageLimite.TabIndex = 37;
-            this.okImageLimite.TabStop = false;
-            this.okImageLimite.Visible = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnN,
             this.ColumnXn,
             this.ColumnXnSig,
             this.ColumnNums});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.DarkGray;
-            this.dataGridView1.Location = new System.Drawing.Point(354, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(344, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(453, 288);
-            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.Size = new System.Drawing.Size(533, 297);
+            this.dataGridView1.TabIndex = 48;
             // 
             // ColumnN
             // 
@@ -749,12 +788,12 @@ namespace PseudoGen
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.flatButtonSmirnovCheck);
             this.panel2.Controls.Add(this.FlatButtonPromCheck);
-            this.panel2.Controls.Add(this.bunifuFlatButton2);
-            this.panel2.Location = new System.Drawing.Point(354, 352);
+            this.panel2.Location = new System.Drawing.Point(344, 387);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(453, 174);
-            this.panel2.TabIndex = 39;
+            this.panel2.Size = new System.Drawing.Size(533, 174);
+            this.panel2.TabIndex = 58;
             // 
             // panel3
             // 
@@ -763,7 +802,7 @@ namespace PseudoGen
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(-1, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(464, 30);
+            this.panel3.Size = new System.Drawing.Size(533, 30);
             this.panel3.TabIndex = 0;
             // 
             // label2
@@ -776,6 +815,42 @@ namespace PseudoGen
             this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mensajes";
+            // 
+            // flatButtonSmirnovCheck
+            // 
+            this.flatButtonSmirnovCheck.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.flatButtonSmirnovCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.flatButtonSmirnovCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.flatButtonSmirnovCheck.BorderRadius = 0;
+            this.flatButtonSmirnovCheck.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flatButtonSmirnovCheck.ButtonText = "";
+            this.flatButtonSmirnovCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatButtonSmirnovCheck.DisabledColor = System.Drawing.Color.Gray;
+            this.flatButtonSmirnovCheck.Iconcolor = System.Drawing.Color.Transparent;
+            this.flatButtonSmirnovCheck.Iconimage = ((System.Drawing.Image)(resources.GetObject("flatButtonSmirnovCheck.Iconimage")));
+            this.flatButtonSmirnovCheck.Iconimage_right = null;
+            this.flatButtonSmirnovCheck.Iconimage_right_Selected = null;
+            this.flatButtonSmirnovCheck.Iconimage_Selected = null;
+            this.flatButtonSmirnovCheck.IconMarginLeft = 0;
+            this.flatButtonSmirnovCheck.IconMarginRight = 0;
+            this.flatButtonSmirnovCheck.IconRightVisible = true;
+            this.flatButtonSmirnovCheck.IconRightZoom = 0D;
+            this.flatButtonSmirnovCheck.IconVisible = true;
+            this.flatButtonSmirnovCheck.IconZoom = 90D;
+            this.flatButtonSmirnovCheck.IsTab = false;
+            this.flatButtonSmirnovCheck.Location = new System.Drawing.Point(-2, 101);
+            this.flatButtonSmirnovCheck.Name = "flatButtonSmirnovCheck";
+            this.flatButtonSmirnovCheck.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.flatButtonSmirnovCheck.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.flatButtonSmirnovCheck.OnHoverTextColor = System.Drawing.Color.White;
+            this.flatButtonSmirnovCheck.selected = false;
+            this.flatButtonSmirnovCheck.Size = new System.Drawing.Size(530, 60);
+            this.flatButtonSmirnovCheck.TabIndex = 17;
+            this.flatButtonSmirnovCheck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.flatButtonSmirnovCheck.Textcolor = System.Drawing.Color.White;
+            this.flatButtonSmirnovCheck.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatButtonSmirnovCheck.Visible = false;
+            this.flatButtonSmirnovCheck.Click += new System.EventHandler(this.flatButtonSmirnovCheck_Click);
             // 
             // FlatButtonPromCheck
             // 
@@ -798,13 +873,13 @@ namespace PseudoGen
             this.FlatButtonPromCheck.IconVisible = true;
             this.FlatButtonPromCheck.IconZoom = 90D;
             this.FlatButtonPromCheck.IsTab = false;
-            this.FlatButtonPromCheck.Location = new System.Drawing.Point(-2, 47);
+            this.FlatButtonPromCheck.Location = new System.Drawing.Point(-2, 35);
             this.FlatButtonPromCheck.Name = "FlatButtonPromCheck";
             this.FlatButtonPromCheck.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.FlatButtonPromCheck.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.FlatButtonPromCheck.OnHoverTextColor = System.Drawing.SystemColors.ButtonFace;
             this.FlatButtonPromCheck.selected = false;
-            this.FlatButtonPromCheck.Size = new System.Drawing.Size(465, 60);
+            this.FlatButtonPromCheck.Size = new System.Drawing.Size(530, 60);
             this.FlatButtonPromCheck.TabIndex = 0;
             this.FlatButtonPromCheck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FlatButtonPromCheck.Textcolor = System.Drawing.Color.White;
@@ -812,177 +887,123 @@ namespace PseudoGen
             this.FlatButtonPromCheck.Visible = false;
             this.FlatButtonPromCheck.Click += new System.EventHandler(this.FlatButtonPromCheck_Click);
             // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuFlatButton2.ButtonText = "Inserte prueba de said";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(-2, 113);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(465, 60);
-            this.bunifuFlatButton2.TabIndex = 17;
-            this.bunifuFlatButton2.Text = "Inserte prueba de said";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Visible = false;
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
-            // 
             // imageErrorLimite
             // 
             this.imageErrorLimite.Image = ((System.Drawing.Image)(resources.GetObject("imageErrorLimite.Image")));
-            this.imageErrorLimite.Location = new System.Drawing.Point(275, 414);
+            this.imageErrorLimite.Location = new System.Drawing.Point(265, 415);
             this.imageErrorLimite.Name = "imageErrorLimite";
             this.imageErrorLimite.Size = new System.Drawing.Size(28, 28);
             this.imageErrorLimite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageErrorLimite.TabIndex = 36;
+            this.imageErrorLimite.TabIndex = 57;
             this.imageErrorLimite.TabStop = false;
             this.imageErrorLimite.Visible = false;
             // 
             // OkImageX0
             // 
             this.OkImageX0.Image = ((System.Drawing.Image)(resources.GetObject("OkImageX0.Image")));
-            this.OkImageX0.Location = new System.Drawing.Point(275, 94);
+            this.OkImageX0.Location = new System.Drawing.Point(264, 95);
             this.OkImageX0.Name = "OkImageX0";
             this.OkImageX0.Size = new System.Drawing.Size(28, 28);
             this.OkImageX0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.OkImageX0.TabIndex = 24;
+            this.OkImageX0.TabIndex = 53;
             this.OkImageX0.TabStop = false;
             this.OkImageX0.Visible = false;
             // 
             // ErrorImageX0
             // 
             this.ErrorImageX0.Image = ((System.Drawing.Image)(resources.GetObject("ErrorImageX0.Image")));
-            this.ErrorImageX0.Location = new System.Drawing.Point(275, 94);
+            this.ErrorImageX0.Location = new System.Drawing.Point(265, 95);
             this.ErrorImageX0.Name = "ErrorImageX0";
             this.ErrorImageX0.Size = new System.Drawing.Size(28, 28);
             this.ErrorImageX0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ErrorImageX0.TabIndex = 20;
+            this.ErrorImageX0.TabIndex = 49;
             this.ErrorImageX0.TabStop = false;
             this.ErrorImageX0.Visible = false;
             // 
             // OkImageA
             // 
             this.OkImageA.Image = ((System.Drawing.Image)(resources.GetObject("OkImageA.Image")));
-            this.OkImageA.Location = new System.Drawing.Point(275, 174);
+            this.OkImageA.Location = new System.Drawing.Point(265, 175);
             this.OkImageA.Name = "OkImageA";
             this.OkImageA.Size = new System.Drawing.Size(28, 28);
             this.OkImageA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.OkImageA.TabIndex = 25;
+            this.OkImageA.TabIndex = 54;
             this.OkImageA.TabStop = false;
             this.OkImageA.Visible = false;
             // 
             // ErrorImageA
             // 
             this.ErrorImageA.Image = ((System.Drawing.Image)(resources.GetObject("ErrorImageA.Image")));
-            this.ErrorImageA.Location = new System.Drawing.Point(275, 174);
+            this.ErrorImageA.Location = new System.Drawing.Point(265, 175);
             this.ErrorImageA.Name = "ErrorImageA";
             this.ErrorImageA.Size = new System.Drawing.Size(28, 28);
             this.ErrorImageA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ErrorImageA.TabIndex = 21;
+            this.ErrorImageA.TabIndex = 50;
             this.ErrorImageA.TabStop = false;
             this.ErrorImageA.Visible = false;
             // 
             // ErrorImageC
             // 
             this.ErrorImageC.Image = ((System.Drawing.Image)(resources.GetObject("ErrorImageC.Image")));
-            this.ErrorImageC.Location = new System.Drawing.Point(275, 254);
+            this.ErrorImageC.Location = new System.Drawing.Point(265, 255);
             this.ErrorImageC.Name = "ErrorImageC";
             this.ErrorImageC.Size = new System.Drawing.Size(28, 28);
             this.ErrorImageC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ErrorImageC.TabIndex = 22;
+            this.ErrorImageC.TabIndex = 51;
             this.ErrorImageC.TabStop = false;
             this.ErrorImageC.Visible = false;
             // 
             // OkImageC
             // 
             this.OkImageC.Image = ((System.Drawing.Image)(resources.GetObject("OkImageC.Image")));
-            this.OkImageC.Location = new System.Drawing.Point(275, 254);
+            this.OkImageC.Location = new System.Drawing.Point(265, 255);
             this.OkImageC.Name = "OkImageC";
             this.OkImageC.Size = new System.Drawing.Size(28, 28);
             this.OkImageC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.OkImageC.TabIndex = 26;
+            this.OkImageC.TabIndex = 55;
             this.OkImageC.TabStop = false;
             this.OkImageC.Visible = false;
             // 
             // ErrorImageM
             // 
             this.ErrorImageM.Image = ((System.Drawing.Image)(resources.GetObject("ErrorImageM.Image")));
-            this.ErrorImageM.Location = new System.Drawing.Point(275, 334);
+            this.ErrorImageM.Location = new System.Drawing.Point(265, 335);
             this.ErrorImageM.Name = "ErrorImageM";
             this.ErrorImageM.Size = new System.Drawing.Size(28, 28);
             this.ErrorImageM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ErrorImageM.TabIndex = 23;
+            this.ErrorImageM.TabIndex = 52;
             this.ErrorImageM.TabStop = false;
             this.ErrorImageM.Visible = false;
             // 
             // OkImageM
             // 
             this.OkImageM.Image = ((System.Drawing.Image)(resources.GetObject("OkImageM.Image")));
-            this.OkImageM.Location = new System.Drawing.Point(275, 334);
+            this.OkImageM.Location = new System.Drawing.Point(265, 335);
             this.OkImageM.Name = "OkImageM";
             this.OkImageM.Size = new System.Drawing.Size(28, 28);
             this.OkImageM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.OkImageM.TabIndex = 27;
+            this.OkImageM.TabIndex = 56;
             this.OkImageM.TabStop = false;
             this.OkImageM.Visible = false;
             // 
-            // tabControl
+            // tabPage2
             // 
-            this.tabControl.BeforeTouchSize = new System.Drawing.Size(820, 570);
-            this.tabControl.Controls.Add(this.tabPageAdv1);
-            this.tabControl.Controls.Add(this.tabPageAdv2);
-            this.tabControl.InactiveCloseButtonForeColor = System.Drawing.SystemColors.Control;
-            this.tabControl.Location = new System.Drawing.Point(0, 30);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.ShowCloseButtonForActiveTabOnly = true;
-            this.tabControl.ShowTabCloseButton = true;
-            this.tabControl.Size = new System.Drawing.Size(820, 570);
-            this.tabControl.SizeMode = Syncfusion.Windows.Forms.Tools.TabSizeMode.FillToRight;
-            this.tabControl.TabIndex = 41;
-            this.tabControl.ThemeStyle.PrimitiveButtonStyle.DisabledNextPageImage = null;
-            // 
-            // tabPageAdv2
-            // 
-            this.tabPageAdv2.Image = null;
-            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(1, 25);
-            this.tabPageAdv2.Name = "tabPageAdv2";
-            this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(817, 543);
-            this.tabPageAdv2.TabIndex = 2;
-            this.tabPageAdv2.Text = "tabPageAdv2";
-            this.tabPageAdv2.ThemesEnabled = false;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(892, 574);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(820, 600);
-            this.Controls.Add(this.tabControl);
+            this.ClientSize = new System.Drawing.Size(900, 630);
             this.Controls.Add(this.menuBarPanel);
+            this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -996,8 +1017,10 @@ namespace PseudoGen
             this.menuBarPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.butMinimizar)).EndInit();
-            this.tabPageAdv1.ResumeLayout(false);
-            this.tabPageAdv1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.okImageLimite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -1006,7 +1029,6 @@ namespace PseudoGen
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.okImageLimite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1020,8 +1042,6 @@ namespace PseudoGen
             ((System.ComponentModel.ISupportInitialize)(this.OkImageC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorImageM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OkImageM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControl)).EndInit();
-            this.tabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1038,33 +1058,31 @@ namespace PseudoGen
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControl;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.PictureBox okImageLimite;
+        private System.Windows.Forms.TextBox textBDecimales;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox comboBAlfa;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private System.Windows.Forms.PictureBox okImageLimite;
         private System.Windows.Forms.Label labelErrorLimite;
-        private System.Windows.Forms.PictureBox imageErrorLimite;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBoxLimitar;
-        private System.Windows.Forms.PictureBox OkImageA;
         private System.Windows.Forms.CheckBox checkBoxLimitar;
-        private System.Windows.Forms.PictureBox OkImageC;
         private System.Windows.Forms.Label labelErrorM;
-        private System.Windows.Forms.PictureBox OkImageM;
         private System.Windows.Forms.Label labelErrorC;
-        private System.Windows.Forms.PictureBox OkImageX0;
         private System.Windows.Forms.Label labelErrorA;
         private Bunifu.Framework.UI.BunifuThinButton2 ButGenerar;
         private System.Windows.Forms.Label labelErrorX0;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBoxA;
-        private System.Windows.Forms.PictureBox ErrorImageM;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBoxM;
-        private System.Windows.Forms.PictureBox ErrorImageC;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBoxC;
-        private System.Windows.Forms.PictureBox ErrorImageA;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.PictureBox ErrorImageX0;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxX0;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
@@ -1077,14 +1095,18 @@ namespace PseudoGen
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuFlatButton flatButtonSmirnovCheck;
         private Bunifu.Framework.UI.BunifuFlatButton FlatButtonPromCheck;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.Panel panel5;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
-        private System.Windows.Forms.TextBox textBDecimales;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.PictureBox imageErrorLimite;
+        private System.Windows.Forms.PictureBox OkImageX0;
+        private System.Windows.Forms.PictureBox ErrorImageX0;
+        private System.Windows.Forms.PictureBox OkImageA;
+        private System.Windows.Forms.PictureBox ErrorImageA;
+        private System.Windows.Forms.PictureBox ErrorImageC;
+        private System.Windows.Forms.PictureBox OkImageC;
+        private System.Windows.Forms.PictureBox ErrorImageM;
+        private System.Windows.Forms.PictureBox OkImageM;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 

@@ -38,7 +38,7 @@ namespace PseudoGen
             }
             Calcular();
         }
-
+        
         public void Calcular()
         {
             Xn[0] = X0;
