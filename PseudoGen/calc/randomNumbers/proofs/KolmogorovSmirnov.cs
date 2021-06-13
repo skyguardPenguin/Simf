@@ -28,7 +28,7 @@ namespace PseudoGen.calc.randomNumbers.proofs
         public KolmogorovSmirnov(Generador gen)
         {
             generador = gen;
-            C = gen.Nums.Length;
+            C = gen.Nums.Length-1;
             Smirnov = new double[C, 7];
             tabladealfa = new double[C, 7];
             arreglito = new double[C];

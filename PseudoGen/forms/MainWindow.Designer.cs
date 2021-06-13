@@ -31,10 +31,10 @@ namespace PseudoGen
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.butCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +54,25 @@ namespace PseudoGen
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnXn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnXnSig = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNums = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.flatButtonSmirnovCheck = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.FlatButtonPromCheck = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.imageErrorLimite = new System.Windows.Forms.PictureBox();
+            this.OkImageX0 = new System.Windows.Forms.PictureBox();
+            this.ErrorImageX0 = new System.Windows.Forms.PictureBox();
+            this.OkImageA = new System.Windows.Forms.PictureBox();
+            this.ErrorImageA = new System.Windows.Forms.PictureBox();
+            this.ErrorImageC = new System.Windows.Forms.PictureBox();
+            this.OkImageC = new System.Windows.Forms.PictureBox();
+            this.ErrorImageM = new System.Windows.Forms.PictureBox();
+            this.OkImageM = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBAlfa = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -75,25 +94,6 @@ namespace PseudoGen
             this.TextboxX0 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnXn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnXnSig = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNums = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.flatButtonSmirnovCheck = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.FlatButtonPromCheck = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.imageErrorLimite = new System.Windows.Forms.PictureBox();
-            this.OkImageX0 = new System.Windows.Forms.PictureBox();
-            this.ErrorImageX0 = new System.Windows.Forms.PictureBox();
-            this.OkImageA = new System.Windows.Forms.PictureBox();
-            this.ErrorImageA = new System.Windows.Forms.PictureBox();
-            this.ErrorImageC = new System.Windows.Forms.PictureBox();
-            this.OkImageC = new System.Windows.Forms.PictureBox();
-            this.ErrorImageM = new System.Windows.Forms.PictureBox();
-            this.OkImageM = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.butCerrar)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -106,8 +106,6 @@ namespace PseudoGen
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -120,6 +118,8 @@ namespace PseudoGen
             ((System.ComponentModel.ISupportInitialize)(this.OkImageC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorImageM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OkImageM)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // butCerrar
@@ -353,393 +353,53 @@ namespace PseudoGen
             this.bunifuCustomLabel6.Text = "Números";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.comboBAlfa);
-            this.panel4.Controls.Add(this.bunifuCustomLabel7);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.labelErrorLimite);
-            this.panel4.Controls.Add(this.TextBoxLimitar);
-            this.panel4.Controls.Add(this.checkBoxLimitar);
-            this.panel4.Controls.Add(this.labelErrorM);
-            this.panel4.Controls.Add(this.labelErrorC);
-            this.panel4.Controls.Add(this.labelErrorA);
-            this.panel4.Controls.Add(this.ButGenerar);
-            this.panel4.Controls.Add(this.labelErrorX0);
-            this.panel4.Controls.Add(this.TextBoxA);
-            this.panel4.Controls.Add(this.TextBoxM);
-            this.panel4.Controls.Add(this.TextBoxC);
-            this.panel4.Controls.Add(this.bunifuCustomLabel1);
-            this.panel4.Controls.Add(this.bunifuCustomLabel2);
-            this.panel4.Controls.Add(this.TextboxX0);
-            this.panel4.Controls.Add(this.bunifuCustomLabel3);
-            this.panel4.Controls.Add(this.bunifuCustomLabel4);
-            this.panel4.Location = new System.Drawing.Point(6, 17);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(252, 544);
-            this.panel4.TabIndex = 59;
-            // 
-            // comboBAlfa
-            // 
-            this.comboBAlfa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.comboBAlfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBAlfa.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBAlfa.FormattingEnabled = true;
-            this.comboBAlfa.Items.AddRange(new object[] {
-            ".1%",
-            ".2%",
-            ".5%",
-            "1%",
-            "2%",
-            "5%",
-            "10%",
-            "20%"});
-            this.comboBAlfa.Location = new System.Drawing.Point(110, 463);
-            this.comboBAlfa.Name = "comboBAlfa";
-            this.comboBAlfa.Size = new System.Drawing.Size(142, 21);
-            this.comboBAlfa.TabIndex = 40;
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Arial", 12F);
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(0, 463);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(99, 18);
-            this.bunifuCustomLabel7.TabIndex = 39;
-            this.bunifuCustomLabel7.Text = "Valor de alfa:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.panel1.Controls.Add(this.bunifuCustomLabel5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(252, 40);
-            this.panel1.TabIndex = 19;
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Arial Narrow", 15F);
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(73, 10);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(95, 24);
-            this.bunifuCustomLabel5.TabIndex = 18;
-            this.bunifuCustomLabel5.Text = "Parámetros";
-            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // labelErrorLimite
-            // 
-            this.labelErrorLimite.AutoSize = true;
-            this.labelErrorLimite.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorLimite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.labelErrorLimite.Location = new System.Drawing.Point(3, 430);
-            this.labelErrorLimite.Name = "labelErrorLimite";
-            this.labelErrorLimite.Size = new System.Drawing.Size(216, 16);
-            this.labelErrorLimite.TabIndex = 38;
-            this.labelErrorLimite.Text = "Por favor, escribe un número entero.";
-            this.labelErrorLimite.Visible = false;
-            // 
-            // TextBoxLimitar
-            // 
-            this.TextBoxLimitar.AutoSize = true;
-            this.TextBoxLimitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.TextBoxLimitar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxLimitar.Enabled = false;
-            this.TextBoxLimitar.Font = new System.Drawing.Font("Arial", 10F);
-            this.TextBoxLimitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextBoxLimitar.HintForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextBoxLimitar.HintText = "";
-            this.TextBoxLimitar.isPassword = false;
-            this.TextBoxLimitar.LineFocusedColor = System.Drawing.Color.Gray;
-            this.TextBoxLimitar.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextBoxLimitar.LineMouseHoverColor = System.Drawing.Color.Gray;
-            this.TextBoxLimitar.LineThickness = 3;
-            this.TextBoxLimitar.Location = new System.Drawing.Point(6, 398);
-            this.TextBoxLimitar.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBoxLimitar.Name = "TextBoxLimitar";
-            this.TextBoxLimitar.Size = new System.Drawing.Size(246, 28);
-            this.TextBoxLimitar.TabIndex = 35;
-            this.TextBoxLimitar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBoxLimitar.OnValueChanged += new System.EventHandler(this.TextBoxLimitar_OnValueChanged);
-            // 
-            // checkBoxLimitar
-            // 
-            this.checkBoxLimitar.AutoSize = true;
-            this.checkBoxLimitar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxLimitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBoxLimitar.Location = new System.Drawing.Point(6, 378);
-            this.checkBoxLimitar.Name = "checkBoxLimitar";
-            this.checkBoxLimitar.Size = new System.Drawing.Size(225, 22);
-            this.checkBoxLimitar.TabIndex = 34;
-            this.checkBoxLimitar.Text = "Limitar cantidad de números";
-            this.checkBoxLimitar.UseVisualStyleBackColor = true;
-            // 
-            // labelErrorM
-            // 
-            this.labelErrorM.AutoSize = true;
-            this.labelErrorM.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.labelErrorM.Location = new System.Drawing.Point(3, 349);
-            this.labelErrorM.Name = "labelErrorM";
-            this.labelErrorM.Size = new System.Drawing.Size(216, 16);
-            this.labelErrorM.TabIndex = 31;
-            this.labelErrorM.Text = "Por favor, escribe un número entero.";
-            this.labelErrorM.Visible = false;
-            // 
-            // labelErrorC
-            // 
-            this.labelErrorC.AutoSize = true;
-            this.labelErrorC.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.labelErrorC.Location = new System.Drawing.Point(3, 270);
-            this.labelErrorC.Name = "labelErrorC";
-            this.labelErrorC.Size = new System.Drawing.Size(216, 16);
-            this.labelErrorC.TabIndex = 30;
-            this.labelErrorC.Text = "Por favor, escribe un número entero.";
-            this.labelErrorC.Visible = false;
-            // 
-            // labelErrorA
-            // 
-            this.labelErrorA.AutoSize = true;
-            this.labelErrorA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.labelErrorA.Location = new System.Drawing.Point(3, 190);
-            this.labelErrorA.Name = "labelErrorA";
-            this.labelErrorA.Size = new System.Drawing.Size(216, 16);
-            this.labelErrorA.TabIndex = 29;
-            this.labelErrorA.Text = "Por favor, escribe un número entero.";
-            this.labelErrorA.Visible = false;
-            // 
-            // ButGenerar
-            // 
-            this.ButGenerar.ActiveBorderThickness = 1;
-            this.ButGenerar.ActiveCornerRadius = 20;
-            this.ButGenerar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
-            this.ButGenerar.ActiveForecolor = System.Drawing.Color.White;
-            this.ButGenerar.ActiveLineColor = System.Drawing.SystemColors.ButtonFace;
-            this.ButGenerar.BackColor = System.Drawing.Color.Black;
-            this.ButGenerar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButGenerar.BackgroundImage")));
-            this.ButGenerar.ButtonText = "Generar";
-            this.ButGenerar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButGenerar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ButGenerar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButGenerar.ForeColor = System.Drawing.SystemColors.Control;
-            this.ButGenerar.IdleBorderThickness = 1;
-            this.ButGenerar.IdleCornerRadius = 30;
-            this.ButGenerar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.ButGenerar.IdleForecolor = System.Drawing.SystemColors.ButtonFace;
-            this.ButGenerar.IdleLineColor = System.Drawing.SystemColors.ButtonFace;
-            this.ButGenerar.Location = new System.Drawing.Point(0, 494);
-            this.ButGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ButGenerar.Name = "ButGenerar";
-            this.ButGenerar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ButGenerar.Size = new System.Drawing.Size(252, 50);
-            this.ButGenerar.TabIndex = 2;
-            this.ButGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ButGenerar.Click += new System.EventHandler(this.ButGenerar_Click);
-            // 
-            // labelErrorX0
-            // 
-            this.labelErrorX0.AutoSize = true;
-            this.labelErrorX0.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorX0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.labelErrorX0.Location = new System.Drawing.Point(0, 110);
-            this.labelErrorX0.Name = "labelErrorX0";
-            this.labelErrorX0.Size = new System.Drawing.Size(216, 16);
-            this.labelErrorX0.TabIndex = 28;
-            this.labelErrorX0.Text = "Por favor, escribe un número entero.";
-            this.labelErrorX0.Visible = false;
-            // 
-            // TextBoxA
-            // 
-            this.TextBoxA.AutoSize = true;
-            this.TextBoxA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.TextBoxA.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxA.Font = new System.Drawing.Font("Arial", 10F);
-            this.TextBoxA.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextBoxA.HintForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextBoxA.HintText = "";
-            this.TextBoxA.isPassword = false;
-            this.TextBoxA.LineFocusedColor = System.Drawing.Color.Blue;
-            this.TextBoxA.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextBoxA.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.TextBoxA.LineThickness = 3;
-            this.TextBoxA.Location = new System.Drawing.Point(3, 158);
-            this.TextBoxA.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBoxA.Name = "TextBoxA";
-            this.TextBoxA.Size = new System.Drawing.Size(249, 28);
-            this.TextBoxA.TabIndex = 8;
-            this.TextBoxA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBoxA.OnValueChanged += new System.EventHandler(this.TextBoxA_OnValueChanged);
-            // 
-            // TextBoxM
-            // 
-            this.TextBoxM.AutoSize = true;
-            this.TextBoxM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.TextBoxM.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxM.Font = new System.Drawing.Font("Arial", 10F);
-            this.TextBoxM.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextBoxM.HintForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextBoxM.HintText = "";
-            this.TextBoxM.isPassword = false;
-            this.TextBoxM.LineFocusedColor = System.Drawing.Color.Blue;
-            this.TextBoxM.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextBoxM.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.TextBoxM.LineThickness = 3;
-            this.TextBoxM.Location = new System.Drawing.Point(3, 318);
-            this.TextBoxM.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBoxM.Name = "TextBoxM";
-            this.TextBoxM.Size = new System.Drawing.Size(249, 28);
-            this.TextBoxM.TabIndex = 9;
-            this.TextBoxM.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBoxM.OnValueChanged += new System.EventHandler(this.TextBoxM_OnValueChanged);
-            // 
-            // TextBoxC
-            // 
-            this.TextBoxC.AutoSize = true;
-            this.TextBoxC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.TextBoxC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxC.Font = new System.Drawing.Font("Arial", 10F);
-            this.TextBoxC.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextBoxC.HintForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextBoxC.HintText = "";
-            this.TextBoxC.isPassword = false;
-            this.TextBoxC.LineFocusedColor = System.Drawing.Color.Blue;
-            this.TextBoxC.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextBoxC.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.TextBoxC.LineThickness = 3;
-            this.TextBoxC.Location = new System.Drawing.Point(3, 238);
-            this.TextBoxC.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBoxC.Name = "TextBoxC";
-            this.TextBoxC.Size = new System.Drawing.Size(249, 28);
-            this.TextBoxC.TabIndex = 10;
-            this.TextBoxC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBoxC.OnValueChanged += new System.EventHandler(this.TextBoxC_OnValueChanged);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Arial", 12F);
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 58);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(28, 18);
-            this.bunifuCustomLabel1.TabIndex = 11;
-            this.bunifuCustomLabel1.Text = "X0";
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Arial", 12F);
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(3, 138);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(17, 18);
-            this.bunifuCustomLabel2.TabIndex = 12;
-            this.bunifuCustomLabel2.Text = "a";
-            // 
-            // TextboxX0
-            // 
-            this.TextboxX0.AutoSize = true;
-            this.TextboxX0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.TextboxX0.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextboxX0.Font = new System.Drawing.Font("Arial", 10F);
-            this.TextboxX0.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextboxX0.HintForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextboxX0.HintText = "";
-            this.TextboxX0.isPassword = false;
-            this.TextboxX0.LineFocusedColor = System.Drawing.Color.Blue;
-            this.TextboxX0.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextboxX0.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.TextboxX0.LineThickness = 3;
-            this.TextboxX0.Location = new System.Drawing.Point(3, 78);
-            this.TextboxX0.Margin = new System.Windows.Forms.Padding(4);
-            this.TextboxX0.Name = "TextboxX0";
-            this.TextboxX0.Size = new System.Drawing.Size(249, 28);
-            this.TextboxX0.TabIndex = 13;
-            this.TextboxX0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextboxX0.OnValueChanged += new System.EventHandler(this.TextboxX0_OnValueChanged);
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Arial", 12F);
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(3, 218);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(16, 18);
-            this.bunifuCustomLabel3.TabIndex = 14;
-            this.bunifuCustomLabel3.Text = "c";
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Arial", 12F);
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(3, 298);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(21, 18);
-            this.bunifuCustomLabel4.TabIndex = 15;
-            this.bunifuCustomLabel4.Text = "m";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnN,
             this.ColumnXn,
             this.ColumnXnSig,
             this.ColumnNums});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.DarkGray;
             this.dataGridView1.Location = new System.Drawing.Point(344, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 40;
             this.dataGridView1.Size = new System.Drawing.Size(533, 297);
@@ -986,6 +646,347 @@ namespace PseudoGen
             this.OkImageM.TabStop = false;
             this.OkImageM.Visible = false;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.comboBAlfa);
+            this.panel4.Controls.Add(this.bunifuCustomLabel7);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.labelErrorLimite);
+            this.panel4.Controls.Add(this.TextBoxLimitar);
+            this.panel4.Controls.Add(this.checkBoxLimitar);
+            this.panel4.Controls.Add(this.labelErrorM);
+            this.panel4.Controls.Add(this.labelErrorC);
+            this.panel4.Controls.Add(this.labelErrorA);
+            this.panel4.Controls.Add(this.ButGenerar);
+            this.panel4.Controls.Add(this.labelErrorX0);
+            this.panel4.Controls.Add(this.TextBoxA);
+            this.panel4.Controls.Add(this.TextBoxM);
+            this.panel4.Controls.Add(this.TextBoxC);
+            this.panel4.Controls.Add(this.bunifuCustomLabel1);
+            this.panel4.Controls.Add(this.bunifuCustomLabel2);
+            this.panel4.Controls.Add(this.TextboxX0);
+            this.panel4.Controls.Add(this.bunifuCustomLabel3);
+            this.panel4.Controls.Add(this.bunifuCustomLabel4);
+            this.panel4.Location = new System.Drawing.Point(6, 17);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(252, 544);
+            this.panel4.TabIndex = 59;
+            // 
+            // comboBAlfa
+            // 
+            this.comboBAlfa.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.comboBAlfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBAlfa.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBAlfa.FormattingEnabled = true;
+            this.comboBAlfa.Items.AddRange(new object[] {
+            ".1%",
+            ".2%",
+            ".5%",
+            "1%",
+            "2%",
+            "5%",
+            "10%",
+            "20%"});
+            this.comboBAlfa.Location = new System.Drawing.Point(110, 463);
+            this.comboBAlfa.Name = "comboBAlfa";
+            this.comboBAlfa.Size = new System.Drawing.Size(142, 21);
+            this.comboBAlfa.TabIndex = 40;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Arial", 12F);
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(0, 463);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(99, 18);
+            this.bunifuCustomLabel7.TabIndex = 39;
+            this.bunifuCustomLabel7.Text = "Valor de alfa:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.bunifuCustomLabel5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(252, 40);
+            this.panel1.TabIndex = 19;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Arial Narrow", 15F);
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(73, 10);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(95, 24);
+            this.bunifuCustomLabel5.TabIndex = 18;
+            this.bunifuCustomLabel5.Text = "Parámetros";
+            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // labelErrorLimite
+            // 
+            this.labelErrorLimite.AutoSize = true;
+            this.labelErrorLimite.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorLimite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.labelErrorLimite.Location = new System.Drawing.Point(3, 430);
+            this.labelErrorLimite.Name = "labelErrorLimite";
+            this.labelErrorLimite.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorLimite.TabIndex = 38;
+            this.labelErrorLimite.Text = "Por favor, escribe un número entero.";
+            this.labelErrorLimite.Visible = false;
+            // 
+            // TextBoxLimitar
+            // 
+            this.TextBoxLimitar.AutoSize = true;
+            this.TextBoxLimitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.TextBoxLimitar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxLimitar.Enabled = false;
+            this.TextBoxLimitar.Font = new System.Drawing.Font("Arial", 10F);
+            this.TextBoxLimitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextBoxLimitar.HintForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextBoxLimitar.HintText = "";
+            this.TextBoxLimitar.isPassword = false;
+            this.TextBoxLimitar.LineFocusedColor = System.Drawing.Color.Gray;
+            this.TextBoxLimitar.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBoxLimitar.LineMouseHoverColor = System.Drawing.Color.Gray;
+            this.TextBoxLimitar.LineThickness = 3;
+            this.TextBoxLimitar.Location = new System.Drawing.Point(6, 398);
+            this.TextBoxLimitar.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxLimitar.Name = "TextBoxLimitar";
+            this.TextBoxLimitar.Size = new System.Drawing.Size(246, 28);
+            this.TextBoxLimitar.TabIndex = 35;
+            this.TextBoxLimitar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxLimitar.OnValueChanged += new System.EventHandler(this.TextBoxLimitar_OnValueChanged);
+            // 
+            // checkBoxLimitar
+            // 
+            this.checkBoxLimitar.AutoSize = true;
+            this.checkBoxLimitar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxLimitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.checkBoxLimitar.Location = new System.Drawing.Point(6, 378);
+            this.checkBoxLimitar.Name = "checkBoxLimitar";
+            this.checkBoxLimitar.Size = new System.Drawing.Size(225, 22);
+            this.checkBoxLimitar.TabIndex = 34;
+            this.checkBoxLimitar.Text = "Limitar cantidad de números";
+            this.checkBoxLimitar.UseVisualStyleBackColor = true;
+            this.checkBoxLimitar.CheckedChanged += new System.EventHandler(this.checkBoxLimitar_CheckedChanged);
+            // 
+            // labelErrorM
+            // 
+            this.labelErrorM.AutoSize = true;
+            this.labelErrorM.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.labelErrorM.Location = new System.Drawing.Point(3, 349);
+            this.labelErrorM.Name = "labelErrorM";
+            this.labelErrorM.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorM.TabIndex = 31;
+            this.labelErrorM.Text = "Por favor, escribe un número entero.";
+            this.labelErrorM.Visible = false;
+            // 
+            // labelErrorC
+            // 
+            this.labelErrorC.AutoSize = true;
+            this.labelErrorC.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.labelErrorC.Location = new System.Drawing.Point(3, 270);
+            this.labelErrorC.Name = "labelErrorC";
+            this.labelErrorC.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorC.TabIndex = 30;
+            this.labelErrorC.Text = "Por favor, escribe un número entero.";
+            this.labelErrorC.Visible = false;
+            // 
+            // labelErrorA
+            // 
+            this.labelErrorA.AutoSize = true;
+            this.labelErrorA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.labelErrorA.Location = new System.Drawing.Point(3, 190);
+            this.labelErrorA.Name = "labelErrorA";
+            this.labelErrorA.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorA.TabIndex = 29;
+            this.labelErrorA.Text = "Por favor, escribe un número entero.";
+            this.labelErrorA.Visible = false;
+            // 
+            // ButGenerar
+            // 
+            this.ButGenerar.ActiveBorderThickness = 1;
+            this.ButGenerar.ActiveCornerRadius = 20;
+            this.ButGenerar.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            this.ButGenerar.ActiveForecolor = System.Drawing.Color.White;
+            this.ButGenerar.ActiveLineColor = System.Drawing.SystemColors.ButtonFace;
+            this.ButGenerar.BackColor = System.Drawing.Color.Black;
+            this.ButGenerar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButGenerar.BackgroundImage")));
+            this.ButGenerar.ButtonText = "Generar";
+            this.ButGenerar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButGenerar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ButGenerar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButGenerar.ForeColor = System.Drawing.SystemColors.Control;
+            this.ButGenerar.IdleBorderThickness = 1;
+            this.ButGenerar.IdleCornerRadius = 30;
+            this.ButGenerar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.ButGenerar.IdleForecolor = System.Drawing.SystemColors.ButtonFace;
+            this.ButGenerar.IdleLineColor = System.Drawing.SystemColors.ButtonFace;
+            this.ButGenerar.Location = new System.Drawing.Point(0, 494);
+            this.ButGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButGenerar.Name = "ButGenerar";
+            this.ButGenerar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ButGenerar.Size = new System.Drawing.Size(252, 50);
+            this.ButGenerar.TabIndex = 2;
+            this.ButGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButGenerar.Click += new System.EventHandler(this.ButGenerar_Click);
+            // 
+            // labelErrorX0
+            // 
+            this.labelErrorX0.AutoSize = true;
+            this.labelErrorX0.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorX0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.labelErrorX0.Location = new System.Drawing.Point(0, 110);
+            this.labelErrorX0.Name = "labelErrorX0";
+            this.labelErrorX0.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorX0.TabIndex = 28;
+            this.labelErrorX0.Text = "Por favor, escribe un número entero.";
+            this.labelErrorX0.Visible = false;
+            // 
+            // TextBoxA
+            // 
+            this.TextBoxA.AutoSize = true;
+            this.TextBoxA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.TextBoxA.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxA.Font = new System.Drawing.Font("Arial", 10F);
+            this.TextBoxA.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextBoxA.HintForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextBoxA.HintText = "";
+            this.TextBoxA.isPassword = false;
+            this.TextBoxA.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextBoxA.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBoxA.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextBoxA.LineThickness = 3;
+            this.TextBoxA.Location = new System.Drawing.Point(3, 158);
+            this.TextBoxA.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxA.Name = "TextBoxA";
+            this.TextBoxA.Size = new System.Drawing.Size(249, 28);
+            this.TextBoxA.TabIndex = 8;
+            this.TextBoxA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxA.OnValueChanged += new System.EventHandler(this.TextBoxA_OnValueChanged);
+            // 
+            // TextBoxM
+            // 
+            this.TextBoxM.AutoSize = true;
+            this.TextBoxM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.TextBoxM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxM.Font = new System.Drawing.Font("Arial", 10F);
+            this.TextBoxM.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextBoxM.HintForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextBoxM.HintText = "";
+            this.TextBoxM.isPassword = false;
+            this.TextBoxM.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextBoxM.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBoxM.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextBoxM.LineThickness = 3;
+            this.TextBoxM.Location = new System.Drawing.Point(3, 318);
+            this.TextBoxM.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxM.Name = "TextBoxM";
+            this.TextBoxM.Size = new System.Drawing.Size(249, 28);
+            this.TextBoxM.TabIndex = 9;
+            this.TextBoxM.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxM.OnValueChanged += new System.EventHandler(this.TextBoxM_OnValueChanged);
+            // 
+            // TextBoxC
+            // 
+            this.TextBoxC.AutoSize = true;
+            this.TextBoxC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.TextBoxC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxC.Font = new System.Drawing.Font("Arial", 10F);
+            this.TextBoxC.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextBoxC.HintForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextBoxC.HintText = "";
+            this.TextBoxC.isPassword = false;
+            this.TextBoxC.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextBoxC.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBoxC.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextBoxC.LineThickness = 3;
+            this.TextBoxC.Location = new System.Drawing.Point(3, 238);
+            this.TextBoxC.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxC.Name = "TextBoxC";
+            this.TextBoxC.Size = new System.Drawing.Size(249, 28);
+            this.TextBoxC.TabIndex = 10;
+            this.TextBoxC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBoxC.OnValueChanged += new System.EventHandler(this.TextBoxC_OnValueChanged);
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Arial", 12F);
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 58);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(28, 18);
+            this.bunifuCustomLabel1.TabIndex = 11;
+            this.bunifuCustomLabel1.Text = "X0";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Arial", 12F);
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(3, 138);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(17, 18);
+            this.bunifuCustomLabel2.TabIndex = 12;
+            this.bunifuCustomLabel2.Text = "a";
+            // 
+            // TextboxX0
+            // 
+            this.TextboxX0.AutoSize = true;
+            this.TextboxX0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.TextboxX0.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxX0.Font = new System.Drawing.Font("Arial", 10F);
+            this.TextboxX0.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextboxX0.HintForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextboxX0.HintText = "";
+            this.TextboxX0.isPassword = false;
+            this.TextboxX0.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextboxX0.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextboxX0.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextboxX0.LineThickness = 3;
+            this.TextboxX0.Location = new System.Drawing.Point(3, 78);
+            this.TextboxX0.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxX0.Name = "TextboxX0";
+            this.TextboxX0.Size = new System.Drawing.Size(249, 28);
+            this.TextboxX0.TabIndex = 13;
+            this.TextboxX0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxX0.OnValueChanged += new System.EventHandler(this.TextboxX0_OnValueChanged);
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Arial", 12F);
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(3, 218);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(16, 18);
+            this.bunifuCustomLabel3.TabIndex = 14;
+            this.bunifuCustomLabel3.Text = "c";
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Arial", 12F);
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(3, 298);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(21, 18);
+            this.bunifuCustomLabel4.TabIndex = 15;
+            this.bunifuCustomLabel4.Text = "m";
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -1025,10 +1026,6 @@ namespace PseudoGen
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1042,6 +1039,10 @@ namespace PseudoGen
             ((System.ComponentModel.ISupportInitialize)(this.OkImageC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorImageM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OkImageM)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
