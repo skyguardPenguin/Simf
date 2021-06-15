@@ -286,7 +286,9 @@ namespace PseudoGen
                 m = int.Parse(TextBoxM.Text);
                 Gen = new Generador(X0, a, c, m, limite);
                 Proms = new Promedios(Gen);
-                Smirnov = new KolmogorovSmirnov(Gen,limite);
+                if(limite!=0)
+                    Smirnov = new KolmogorovSmirnov(Gen,limite);
+                else Smirnov = new KolmogorovSmirnov(Gen, m);
 
                 for (int i = 0; i < Gen.Nums.Length - 1; i++)
                     dataGridView1.Rows.Add(i, Gen.Rows[i, 0], Gen.Rows[i, 1], Math.Round(Gen.Rows[i, 2], 7));
@@ -357,6 +359,11 @@ namespace PseudoGen
         {
             comboBAlfa.Text = Smirnov.Alfa.ToString() + "%";
             flatButtonSmirnovCheck.Text = Smirnov.conclusion + ". Click para ver detalles";
+            if (!Smirnov.UniformementeDistribuidos)
+                flatButtonSmirnovCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\cancel_48px.png"));
+            else
+                flatButtonSmirnovCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\ok_48px.png"));
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
