@@ -54,8 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="calc\BloodTest.cs" />
     <Compile Include="calc\DistribucionTriangular.cs" />
     <Compile Include="calc\randomNumbers\proofs\KolmogorovSmirnov.cs" />
+    <Compile Include="design\Controls\TableBloodTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="design\Controls\TableBloodTest.Designer.cs">
+      <DependentUpon>TableBloodTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\proofs\DetallePromedios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +93,9 @@
     <Compile Include="forms\proofs\DetalleKolmogorovSmirnov.Designer.cs">
       <DependentUpon>DetalleKolmogorovSmirnov.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="design\Controls\TableBloodTest.resx">
+      <DependentUpon>TableBloodTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\proofs\DetallePromedios.resx">
       <DependentUpon>DetallePromedios.cs</DependentUpon>
     </EmbeddedResource>
