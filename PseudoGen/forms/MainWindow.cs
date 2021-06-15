@@ -286,7 +286,7 @@ namespace PseudoGen
                 m = int.Parse(TextBoxM.Text);
                 Gen = new Generador(X0, a, c, m, limite);
                 Proms = new Promedios(Gen);
-                Smirnov = new KolmogorovSmirnov(Gen);
+                Smirnov = new KolmogorovSmirnov(Gen,limite);
 
                 for (int i = 0; i < Gen.Nums.Length - 1; i++)
                     dataGridView1.Rows.Add(i, Gen.Rows[i, 0], Gen.Rows[i, 1], Math.Round(Gen.Rows[i, 2], 7));

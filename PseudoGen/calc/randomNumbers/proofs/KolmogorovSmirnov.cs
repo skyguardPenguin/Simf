@@ -13,8 +13,8 @@ namespace PseudoGen.calc.randomNumbers.proofs
         public double Alfa;
         public bool UniformementeDistribuidos = false;
         Generador generador;
-        public double[,] Smirnov;
-        public double[,] tabladealfa;
+        public double[] Smirnov;
+        public double[] Smirnov1;
         public double[] alfa1 = new double[50] { 0.90000, 0.68337, 0.56481, 0.49265, 0.44698, 0.41037, 0.38148, 0.35831, 0.33910, 0.32260, 0.30829, 0.29577, 0.28470, 0.27481, 0.26589, 0.25778, 0.25039, 0.24360, 0.23735, 0.23156, 0.22517, 0.22115, 0.21646, 0.21205, 0.20790, 0.20399, 0.20030, 0.19680, 0.19348, 0.19032, 0.18732, 0.18445, 0.18171, 0.17909, 0.17659, 0.17418, 0.17188, 0.16966, 0.16753, 0.16547, 0.16349, 0.16158, 0.15974, 0.15795, 0.15623, 0.15457, 0.15295, 0.15139, 0.14987, 0.14840 };
         public double[] alfa2 = new double[50] { 0.95000, 0.77639, 0.63604, 0.56522, 0.50945, 0.46799, 0.43607, 0.40962, 0.38746, 0.36866, 0.35242, 0.33815, 0.32549, 0.31417, 0.30397, 0.29472, 0.28627, 0.27851, 0.27136, 0.26473, 0.25858, 0.25283, 0.24746, 0.24242, 0.23768, 0.23320, 0.22898, 0.22497, 0.22117, 0.21756, 0.21412, 0.21085, 0.20771, 0.21472, 0.20185, 0.19910, 0.19646, 0.19392, 0.19148, 0.18913, 0.18687, 0.18468, 0.18257, 0.18051, 0.17856, 0.17665, 0.17481, 0.17301, 0.17128, 0.16959 };
         public double[] alfa3 = new double[50] { 0.97500, 0.84189, 0.70760, 0.62394, 0.56328, 0.51926, 0.48342, 0.45427, 0.43001, 0.40925, 0.39122, 0.37543, 0.36143, 0.34890, 0.33750, 0.32733, 0.31796, 0.30936, 0.30143, 0.29408, 0.28724, 0.28087, 0.27497, 0.26931, 0.26404, 0.25908, 0.25438, 0.24993, 0.24571, 0.24170, 0.23788, 0.23424, 0.23076, 0.22743, 0.22425, 0.22119, 0.21826, 0.21544, 0.21273, 0.21012, 0.20760, 0.20517, 0.20283, 10.20056, 0.19837, 0.19625, 0.19420, 0.19221, 0.19028, 0.18841 };
@@ -25,46 +25,37 @@ namespace PseudoGen.calc.randomNumbers.proofs
         public double[] alfa8 = new double[50] { 0.99950, 0.97764, 0.92065, 0.85047, 0.78137, 0.72479, 0.67930, 0.64098, 0.60846, 0.58042, 0.55588, 0.53422, 0.51490, 0.49753, 0.48182, 0.46750, 0.45540, 0.44234, 0.43119, 0.42085, 0.41122, 0.40223, 0.39380, 0.38588, 0.37743, 0.37139, 0.36473, 0.35842, 0.35242, 0.34672, 0.34129, 0.33611, 0.33115, 0.32641, 0.32187, 0.31751, 0.31333, 0.30931, 0.30544, 0.30171, 0.29811, 0.29465, 0.29130, 0.28806, 0.28493, 0.28190, 0.27896, 0.27611, 0.27339, 0.27067 };
         double max = 0;
         public double[] arreglito;
-        public KolmogorovSmirnov(Generador gen)
+        public KolmogorovSmirnov(Generador gen,int limitacion)
         {
             generador = gen;
-            C = gen.Nums.Length-1;
-            Smirnov = new double[C, 7];
-            tabladealfa = new double[C, 7];
+            C = limitacion;
+            Smirnov = new double[C];
+            Smirnov1 = new double[C];
             arreglito = new double[C];
-            Array.Copy(generador.Nums, arreglito, C);
+            for (int i = 0; i < C; i++)
+            {
+                arreglito[i] = generador.Nums[i];
+            }
             Array.Sort(arreglito);
             for (int i = 0; i < C; i++)
             {
-                Smirnov[i, 0] = arreglito[i];
+                Smirnov[i] = (double)(i + 1) / (double)C;
             }
             for (int i = 0; i < C; i++)
             {
-                Smirnov[i, 1] = (i + 1) / C;
+                Smirnov1[i] = Math.Abs((Smirnov[i] - arreglito[i]));
             }
-            for (int i = 0; i < C; i++)
-            {
-                Smirnov[i, 2] = Math.Abs(Smirnov[i, 0] - Smirnov[i, 1]);
-            }
-            max = 0;
-            for (int i = 0; i < C; i++)
-            {
-                if (Smirnov[i, 2] > max)
-                {
-                    max = Smirnov[i, 2];
-                }
-            }
-        
+            max = Smirnov1.Max();
         }
 
         public string Result(double alfa)
         {
             Alfa = alfa;
-            if (Smirnov.Length > 50)
+            if (C > 50)
             {
-                if (alfa == 10)
+                if (alfa == (double)10)
                 {
-                    if (max <= (1.07 / 300))
+                    if (max <= (1.07 / Math.Sqrt(C )))
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -75,9 +66,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 20)
+                else if (alfa == (double)20)
                 {
-                    if (max <= (1.22 / 300))
+                    if (max <= (1.22 / Math.Sqrt(C )))
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -88,9 +79,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 5)
+                else if (alfa == (double)5)
                 {
-                    if (max <= (1.36 / 300))
+                    if (max <= (1.36 / Math.Sqrt(C )))
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -101,9 +92,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 2)
+                else if (alfa == (double)2)
                 {
-                    if (max <= (1.52 / 300))
+                    if (max <= (1.52 / Math.Sqrt(C )))
                     {
                        conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -114,9 +105,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 1)
+                else if (alfa == (double)1)
                 {
-                    if (max <= (1.63 / 300))
+                    if (max <= (1.63 / Math.Sqrt(C )))
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -127,9 +118,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 0.5)
+                else if (alfa == (double)0.5)
                 {
-                    if (max <= (1.73 / 300))
+                    if (max <= (1.73 / Math.Sqrt(C )))
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -140,9 +131,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 0.2)
+                else if (alfa == (double)0.2)
                 {
-                    if (max <= (1.85 / 300))
+                    if (max <= (1.85 / Math.Sqrt(C)))
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -153,9 +144,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 0.1)
+                else if (alfa == (double)0.1)
                 {
-                    if (max <= (1.95 / 300))
+                    if (max <= (1.95 / Math.Sqrt(C)))
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -171,7 +162,7 @@ namespace PseudoGen.calc.randomNumbers.proofs
             {
                 if (alfa == 20)
                 {
-                    if (max <= alfa1[generador.Nums.Length])
+                    if (max <= (double)alfa1[C-1])
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -182,9 +173,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 10)
+                else if (alfa == (double)10)
                 {
-                    if (max <= alfa2[generador.Nums.Length])
+                    if (max <= alfa2[C-1])
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -195,9 +186,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 5)
+                else if (alfa == (double)5)
                 {
-                    if (max <= alfa3[generador.Nums.Length])
+                    if (max <= alfa3[C-1])
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -208,9 +199,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 2)
+                else if (alfa == (double)2)
                 {
-                    if (max <= alfa4[generador.Nums.Length])
+                    if (max <= alfa4[C-1])
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -221,9 +212,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 1)
+                else if (alfa == (double)1)
                 {
-                    if (max <= alfa5[generador.Nums.Length])
+                    if (max <= alfa5[C-1])
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -234,9 +225,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 0.5)
+                else if (alfa == (double)0.5)
                 {
-                    if (max <= alfa6[generador.Nums.Length])
+                    if (max <= alfa6[C-1])
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -247,9 +238,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 0.2)
+                else if (alfa == (double)0.2)
                 {
-                    if (max <= alfa7[generador.Nums.Length])
+                    if (max <= alfa7[C-1])
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;
@@ -260,9 +251,9 @@ namespace PseudoGen.calc.randomNumbers.proofs
                         UniformementeDistribuidos = false;
                     }
                 }
-                else if (alfa == 0.1)
+                else if (alfa == (double)0.1)
                 {
-                    if (max <= alfa8[generador.Nums.Length])
+                    if (max <= alfa8[C-1])
                     {
                         conclusion = "Los numeros estan distribuidos uniformemente";
                         UniformementeDistribuidos = true;

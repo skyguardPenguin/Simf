@@ -60,7 +60,6 @@ namespace PseudoGen
             this.ColumnXnSig = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNums = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.flatButtonSmirnovCheck = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -383,7 +382,7 @@ namespace PseudoGen
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -448,7 +447,6 @@ namespace PseudoGen
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.doubleBitmapControl1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.flatButtonSmirnovCheck);
             this.panel2.Controls.Add(this.FlatButtonPromCheck);
@@ -456,15 +454,6 @@ namespace PseudoGen
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(533, 174);
             this.panel2.TabIndex = 58;
-            // 
-            // doubleBitmapControl1
-            // 
-            this.doubleBitmapControl1.Location = new System.Drawing.Point(364, 42);
-            this.doubleBitmapControl1.Name = "doubleBitmapControl1";
-            this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
-            this.doubleBitmapControl1.TabIndex = 18;
-            this.doubleBitmapControl1.Text = "doubleBitmapControl1";
-            this.doubleBitmapControl1.Visible = false;
             // 
             // panel3
             // 
@@ -504,9 +493,9 @@ namespace PseudoGen
             this.flatButtonSmirnovCheck.Iconimage_Selected = null;
             this.flatButtonSmirnovCheck.IconMarginLeft = 0;
             this.flatButtonSmirnovCheck.IconMarginRight = 0;
-            this.flatButtonSmirnovCheck.IconRightVisible = false;
+            this.flatButtonSmirnovCheck.IconRightVisible = true;
             this.flatButtonSmirnovCheck.IconRightZoom = 0D;
-            this.flatButtonSmirnovCheck.IconVisible = false;
+            this.flatButtonSmirnovCheck.IconVisible = true;
             this.flatButtonSmirnovCheck.IconZoom = 90D;
             this.flatButtonSmirnovCheck.IsTab = false;
             this.flatButtonSmirnovCheck.Location = new System.Drawing.Point(-2, 101);
@@ -539,9 +528,9 @@ namespace PseudoGen
             this.FlatButtonPromCheck.Iconimage_Selected = null;
             this.FlatButtonPromCheck.IconMarginLeft = 0;
             this.FlatButtonPromCheck.IconMarginRight = 0;
-            this.FlatButtonPromCheck.IconRightVisible = false;
+            this.FlatButtonPromCheck.IconRightVisible = true;
             this.FlatButtonPromCheck.IconRightZoom = 0D;
-            this.FlatButtonPromCheck.IconVisible = false;
+            this.FlatButtonPromCheck.IconVisible = true;
             this.FlatButtonPromCheck.IconZoom = 90D;
             this.FlatButtonPromCheck.IsTab = false;
             this.FlatButtonPromCheck.Location = new System.Drawing.Point(-2, 35);
@@ -1000,13 +989,13 @@ namespace PseudoGen
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Black;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(892, 574);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
@@ -1119,7 +1108,6 @@ namespace PseudoGen
         private System.Windows.Forms.PictureBox ErrorImageM;
         private System.Windows.Forms.PictureBox OkImageM;
         private System.Windows.Forms.TabPage tabPage2;
-        private BunifuAnimatorNS.DoubleBitmapControl doubleBitmapControl1;
     }
 }
 
