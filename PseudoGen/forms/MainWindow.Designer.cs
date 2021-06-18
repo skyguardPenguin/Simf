@@ -31,10 +31,10 @@ namespace PseudoGen
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.butCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,6 +95,13 @@ namespace PseudoGen
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableBloodTest5 = new PseudoGen.design.Controls.TableBloodTest();
+            this.tableBloodTest4 = new PseudoGen.design.Controls.TableBloodTest();
+            this.tableBloodTest3 = new PseudoGen.design.Controls.TableBloodTest();
+            this.tableBloodTest2 = new PseudoGen.design.Controls.TableBloodTest();
+            this.tableBloodTest1 = new PseudoGen.design.Controls.TableBloodTest();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tableWaterTest1 = new PseudoGen.design.Controls.TableWaterTest();
             ((System.ComponentModel.ISupportInitialize)(this.butCerrar)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.menuBarPanel.SuspendLayout();
@@ -120,6 +127,8 @@ namespace PseudoGen
             ((System.ComponentModel.ISupportInitialize)(this.OkImageM)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // butCerrar
@@ -247,6 +256,7 @@ namespace PseudoGen
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 30);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -297,7 +307,7 @@ namespace PseudoGen
             this.textBDecimales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.textBDecimales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBDecimales.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBDecimales.Location = new System.Drawing.Point(818, 65);
+            this.textBDecimales.Location = new System.Drawing.Point(805, 65);
             this.textBDecimales.Name = "textBDecimales";
             this.textBDecimales.Size = new System.Drawing.Size(25, 20);
             this.textBDecimales.TabIndex = 63;
@@ -308,7 +318,7 @@ namespace PseudoGen
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(797, 67);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(784, 67);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(15, 15);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -322,7 +332,7 @@ namespace PseudoGen
             this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(849, 67);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(836, 67);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(15, 15);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -359,51 +369,52 @@ namespace PseudoGen
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnN,
             this.ColumnXn,
             this.ColumnXnSig,
             this.ColumnNums});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.DarkGray;
             this.dataGridView1.Location = new System.Drawing.Point(344, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 40;
             this.dataGridView1.Size = new System.Drawing.Size(533, 297);
             this.dataGridView1.TabIndex = 48;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ColumnN
             // 
@@ -493,9 +504,9 @@ namespace PseudoGen
             this.flatButtonSmirnovCheck.Iconimage_Selected = null;
             this.flatButtonSmirnovCheck.IconMarginLeft = 0;
             this.flatButtonSmirnovCheck.IconMarginRight = 0;
-            this.flatButtonSmirnovCheck.IconRightVisible = true;
+            this.flatButtonSmirnovCheck.IconRightVisible = false;
             this.flatButtonSmirnovCheck.IconRightZoom = 0D;
-            this.flatButtonSmirnovCheck.IconVisible = true;
+            this.flatButtonSmirnovCheck.IconVisible = false;
             this.flatButtonSmirnovCheck.IconZoom = 90D;
             this.flatButtonSmirnovCheck.IsTab = false;
             this.flatButtonSmirnovCheck.Location = new System.Drawing.Point(-2, 101);
@@ -528,9 +539,9 @@ namespace PseudoGen
             this.FlatButtonPromCheck.Iconimage_Selected = null;
             this.FlatButtonPromCheck.IconMarginLeft = 0;
             this.FlatButtonPromCheck.IconMarginRight = 0;
-            this.FlatButtonPromCheck.IconRightVisible = true;
+            this.FlatButtonPromCheck.IconRightVisible = false;
             this.FlatButtonPromCheck.IconRightZoom = 0D;
-            this.FlatButtonPromCheck.IconVisible = true;
+            this.FlatButtonPromCheck.IconVisible = false;
             this.FlatButtonPromCheck.IconZoom = 90D;
             this.FlatButtonPromCheck.IsTab = false;
             this.FlatButtonPromCheck.Location = new System.Drawing.Point(-2, 35);
@@ -541,7 +552,7 @@ namespace PseudoGen
             this.FlatButtonPromCheck.selected = false;
             this.FlatButtonPromCheck.Size = new System.Drawing.Size(530, 60);
             this.FlatButtonPromCheck.TabIndex = 0;
-            this.FlatButtonPromCheck.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FlatButtonPromCheck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.FlatButtonPromCheck.Textcolor = System.Drawing.Color.White;
             this.FlatButtonPromCheck.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FlatButtonPromCheck.Visible = false;
@@ -989,13 +1000,107 @@ namespace PseudoGen
             // 
             // tabPage2
             // 
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.Controls.Add(this.tableBloodTest5);
+            this.tabPage2.Controls.Add(this.tableBloodTest4);
+            this.tabPage2.Controls.Add(this.tableBloodTest3);
+            this.tabPage2.Controls.Add(this.tableBloodTest2);
+            this.tabPage2.Controls.Add(this.tableBloodTest1);
+            this.tabPage2.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(892, 574);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tableBloodTest5
+            // 
+            this.tableBloodTest5.AutoSize = true;
+            this.tableBloodTest5.DataSource = null;
+            this.tableBloodTest5.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.tableBloodTest5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tableBloodTest5.Location = new System.Drawing.Point(10, 1492);
+            this.tableBloodTest5.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tableBloodTest5.Name = "tableBloodTest5";
+            this.tableBloodTest5.Size = new System.Drawing.Size(860, 360);
+            this.tableBloodTest5.TabIndex = 4;
+            this.tableBloodTest5.Zona = 5;
+            // 
+            // tableBloodTest4
+            // 
+            this.tableBloodTest4.AutoSize = true;
+            this.tableBloodTest4.DataSource = null;
+            this.tableBloodTest4.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.tableBloodTest4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tableBloodTest4.Location = new System.Drawing.Point(10, 1126);
+            this.tableBloodTest4.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tableBloodTest4.Name = "tableBloodTest4";
+            this.tableBloodTest4.Size = new System.Drawing.Size(860, 360);
+            this.tableBloodTest4.TabIndex = 3;
+            this.tableBloodTest4.Zona = 4;
+            // 
+            // tableBloodTest3
+            // 
+            this.tableBloodTest3.AutoSize = true;
+            this.tableBloodTest3.DataSource = null;
+            this.tableBloodTest3.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.tableBloodTest3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tableBloodTest3.Location = new System.Drawing.Point(10, 760);
+            this.tableBloodTest3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tableBloodTest3.Name = "tableBloodTest3";
+            this.tableBloodTest3.Size = new System.Drawing.Size(860, 360);
+            this.tableBloodTest3.TabIndex = 2;
+            this.tableBloodTest3.Zona = 3;
+            // 
+            // tableBloodTest2
+            // 
+            this.tableBloodTest2.AutoSize = true;
+            this.tableBloodTest2.DataSource = null;
+            this.tableBloodTest2.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.tableBloodTest2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tableBloodTest2.Location = new System.Drawing.Point(9, 394);
+            this.tableBloodTest2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.tableBloodTest2.Name = "tableBloodTest2";
+            this.tableBloodTest2.Size = new System.Drawing.Size(860, 360);
+            this.tableBloodTest2.TabIndex = 1;
+            this.tableBloodTest2.Zona = 2;
+            // 
+            // tableBloodTest1
+            // 
+            this.tableBloodTest1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.tableBloodTest1.DataSource = null;
+            this.tableBloodTest1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableBloodTest1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tableBloodTest1.Location = new System.Drawing.Point(9, 26);
+            this.tableBloodTest1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableBloodTest1.Name = "tableBloodTest1";
+            this.tableBloodTest1.Size = new System.Drawing.Size(860, 332);
+            this.tableBloodTest1.TabIndex = 0;
+            this.tableBloodTest1.Zona = 1;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.AutoScroll = true;
+            this.tabPage3.BackColor = System.Drawing.Color.Black;
+            this.tabPage3.Controls.Add(this.tableWaterTest1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(892, 574);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            // 
+            // tableWaterTest1
+            // 
+            this.tableWaterTest1.Dia = "Lunes";
+            this.tableWaterTest1.Location = new System.Drawing.Point(26, 28);
+            this.tableWaterTest1.Name = "tableWaterTest1";
+            this.tableWaterTest1.Semana = 1;
+            this.tableWaterTest1.Size = new System.Drawing.Size(800, 619);
+            this.tableWaterTest1.TabIndex = 0;
+            this.tableWaterTest1.Load += new System.EventHandler(this.tableWaterTest1_Load);
             // 
             // MainWindow
             // 
@@ -1043,6 +1148,9 @@ namespace PseudoGen
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1108,6 +1216,13 @@ namespace PseudoGen
         private System.Windows.Forms.PictureBox ErrorImageM;
         private System.Windows.Forms.PictureBox OkImageM;
         private System.Windows.Forms.TabPage tabPage2;
+        private design.Controls.TableBloodTest tableBloodTest1;
+        private design.Controls.TableBloodTest tableBloodTest2;
+        private design.Controls.TableBloodTest tableBloodTest5;
+        private design.Controls.TableBloodTest tableBloodTest4;
+        private design.Controls.TableBloodTest tableBloodTest3;
+        private System.Windows.Forms.TabPage tabPage3;
+        private design.Controls.TableWaterTest tableWaterTest1;
     }
 }
 

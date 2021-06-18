@@ -324,12 +324,21 @@ namespace PseudoGen
                     flatButtonSmirnovCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\ok_48px.png"));
 
 
+
+
+                //////////////////Generación de la tabla de pruebas de sangre
+                tableBloodTest1.DataSource = new calc.DataTableBloodTest(Gen,1);
+                tableBloodTest2.DataSource = new calc.DataTableBloodTest(Gen, 2);
+                tableBloodTest3.DataSource = new calc.DataTableBloodTest(Gen, 3);
+                tableBloodTest4.DataSource = new calc.DataTableBloodTest(Gen, 4);
+                tableBloodTest5.DataSource = new calc.DataTableBloodTest(Gen, 5);
+
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show("Los datos introducidos están incompletos o incorrectos, asegurese de insertar números enteros y rellenar todos los campos requeridos. ");
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message+"\n\n"+ ex.StackTrace);
             }
 
         }
@@ -368,10 +377,20 @@ namespace PseudoGen
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
-      
+        private void tableWaterTest1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
 
         //Abre la ventana de detalles del método de los promedios
         private void FlatButtonPromCheck_Click(object sender, EventArgs e)
