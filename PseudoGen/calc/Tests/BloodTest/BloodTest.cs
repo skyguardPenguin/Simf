@@ -23,6 +23,10 @@ namespace PseudoGen.calc
         public const double P_GLUCOSA = .17;
         public const double P_ALCALINIDAD = .22;
 
+        //Conclusiones
+        public const string APTA = "El agua de los mantos freáticos es apta para seguir siendo empleada por los animales";
+        public const string NO_APTA = "El agua de los mantos freáticos no es apta para el consumo animal";
+
         public static Dictionary<string, double> ProbEnfermedades = new Dictionary<string, double>();
         public static List<string> Enfermedades = new List<string>();
         public static List<double> Probabilidades = new List<double>();

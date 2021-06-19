@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PseudoGen.calc.WaterTest
+namespace PseudoGen.calc.Tests.WaterTest
 {
     class WaterTest
     {
@@ -25,7 +25,7 @@ namespace PseudoGen.calc.WaterTest
         public const double P_FOSFATOS = .16d;
         public const double P_OXIDOS = .17d;
 
-
+        
         public static List<string> Contaminantes = new List<string>();
         public static List<double> Probabilidades = new List<double>();
         public static Dictionary<string, double> ProbContaminantes = new Dictionary<string, double>();

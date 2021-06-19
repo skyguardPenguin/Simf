@@ -31,16 +31,14 @@ namespace PseudoGen
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.butCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.jhjToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBarPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +46,8 @@ namespace PseudoGen
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.okImageLimite = new System.Windows.Forms.PictureBox();
             this.textBDecimales = new System.Windows.Forms.TextBox();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -74,6 +74,7 @@ namespace PseudoGen
             this.ErrorImageM = new System.Windows.Forms.PictureBox();
             this.OkImageM = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.comboBAlfa = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -94,13 +95,19 @@ namespace PseudoGen
             this.TextboxX0 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tableBloodTest5 = new PseudoGen.design.Controls.TableBloodTest();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.labelConclusionBloodTest = new System.Windows.Forms.Label();
+            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.FlatButtonTestCheck = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableBloodTest4 = new PseudoGen.design.Controls.TableBloodTest();
             this.tableBloodTest3 = new PseudoGen.design.Controls.TableBloodTest();
             this.tableBloodTest2 = new PseudoGen.design.Controls.TableBloodTest();
             this.tableBloodTest1 = new PseudoGen.design.Controls.TableBloodTest();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableWaterTest1 = new PseudoGen.design.Controls.TableWaterTest();
             ((System.ComponentModel.ISupportInitialize)(this.butCerrar)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -109,6 +116,7 @@ namespace PseudoGen
             ((System.ComponentModel.ISupportInitialize)(this.butMinimizar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.okImageLimite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -128,7 +136,9 @@ namespace PseudoGen
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // butCerrar
@@ -137,7 +147,7 @@ namespace PseudoGen
             this.butCerrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.butCerrar.Image = ((System.Drawing.Image)(resources.GetObject("butCerrar.Image")));
             this.butCerrar.ImageActive = null;
-            this.butCerrar.Location = new System.Drawing.Point(852, 1);
+            this.butCerrar.Location = new System.Drawing.Point(976, 0);
             this.butCerrar.Name = "butCerrar";
             this.butCerrar.Size = new System.Drawing.Size(43, 24);
             this.butCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,12 +161,10 @@ namespace PseudoGen
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem1,
-            this.archivoToolStripMenuItem,
-            this.editarToolStripMenuItem1});
+            this.ToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(29, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(155, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(77, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -168,8 +176,8 @@ namespace PseudoGen
             this.jhjToolStripMenuItem});
             this.ToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(63, 20);
-            this.ToolStripMenuItem1.Text = "Exportar";
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(69, 20);
+            this.ToolStripMenuItem1.Text = "Opciones";
             this.ToolStripMenuItem1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
             // jhjToolStripMenuItem
@@ -177,36 +185,22 @@ namespace PseudoGen
             this.jhjToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.jhjToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.jhjToolStripMenuItem.Name = "jhjToolStripMenuItem";
-            this.jhjToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.jhjToolStripMenuItem.Text = "Excel ";
+            this.jhjToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.jhjToolStripMenuItem.Text = "Exportar números a Excel";
             this.jhjToolStripMenuItem.Click += new System.EventHandler(this.jhjToolStripMenuItem_Click);
-            // 
-            // archivoToolStripMenuItem
-            // 
-            this.archivoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.archivoToolStripMenuItem.Text = "Editar";
-            // 
-            // editarToolStripMenuItem1
-            // 
-            this.editarToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
-            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(35, 20);
-            this.editarToolStripMenuItem1.Text = "Ver";
             // 
             // menuBarPanel
             // 
             this.menuBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.menuBarPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menuBarPanel.Controls.Add(this.pictureBox1);
-            this.menuBarPanel.Controls.Add(this.label1);
             this.menuBarPanel.Controls.Add(this.butMinimizar);
             this.menuBarPanel.Controls.Add(this.butCerrar);
             this.menuBarPanel.Controls.Add(this.menuStrip1);
+            this.menuBarPanel.Controls.Add(this.label1);
             this.menuBarPanel.Location = new System.Drawing.Point(0, 0);
             this.menuBarPanel.Name = "menuBarPanel";
-            this.menuBarPanel.Size = new System.Drawing.Size(900, 30);
+            this.menuBarPanel.Size = new System.Drawing.Size(1024, 30);
             this.menuBarPanel.TabIndex = 5;
             this.menuBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuBarPanel_MouseDown);
             // 
@@ -223,14 +217,15 @@ namespace PseudoGen
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Arial", 10F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(422, 8);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(1022, 28);
             this.label1.TabIndex = 33;
             this.label1.Text = "PSAGen";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // butMinimizar
             // 
@@ -238,7 +233,7 @@ namespace PseudoGen
             this.butMinimizar.Cursor = System.Windows.Forms.Cursors.Default;
             this.butMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("butMinimizar.Image")));
             this.butMinimizar.ImageActive = null;
-            this.butMinimizar.Location = new System.Drawing.Point(803, 1);
+            this.butMinimizar.Location = new System.Drawing.Point(927, 0);
             this.butMinimizar.Name = "butMinimizar";
             this.butMinimizar.Size = new System.Drawing.Size(43, 24);
             this.butMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -257,15 +252,17 @@ namespace PseudoGen
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 30);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(900, 600);
+            this.tabControl1.Size = new System.Drawing.Size(1024, 738);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Black;
+            this.tabPage1.Controls.Add(this.panel6);
             this.tabPage1.Controls.Add(this.okImageLimite);
             this.tabPage1.Controls.Add(this.textBDecimales);
             this.tabPage1.Controls.Add(this.bunifuImageButton2);
@@ -283,18 +280,41 @@ namespace PseudoGen
             this.tabPage1.Controls.Add(this.ErrorImageM);
             this.tabPage1.Controls.Add(this.OkImageM);
             this.tabPage1.Controls.Add(this.panel4);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Controls.Add(this.bunifuCustomLabel10);
+            this.tabPage1.Font = new System.Drawing.Font("Arial", 12F);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(892, 574);
+            this.tabPage1.Size = new System.Drawing.Size(1016, 709);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.tabPage1.Text = "Generador";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.panel6.Controls.Add(this.bunifuCustomLabel9);
+            this.panel6.Location = new System.Drawing.Point(26, 6);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(969, 44);
+            this.panel6.TabIndex = 65;
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.bunifuCustomLabel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Arial Narrow", 15F);
+            this.bunifuCustomLabel9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(969, 44);
+            this.bunifuCustomLabel9.TabIndex = 19;
+            this.bunifuCustomLabel9.Text = "Generador";
+            this.bunifuCustomLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // okImageLimite
             // 
             this.okImageLimite.Image = ((System.Drawing.Image)(resources.GetObject("okImageLimite.Image")));
-            this.okImageLimite.Location = new System.Drawing.Point(265, 415);
+            this.okImageLimite.Location = new System.Drawing.Point(335, 454);
             this.okImageLimite.Name = "okImageLimite";
             this.okImageLimite.Size = new System.Drawing.Size(28, 28);
             this.okImageLimite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +327,7 @@ namespace PseudoGen
             this.textBDecimales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.textBDecimales.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBDecimales.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBDecimales.Location = new System.Drawing.Point(805, 65);
+            this.textBDecimales.Location = new System.Drawing.Point(924, 108);
             this.textBDecimales.Name = "textBDecimales";
             this.textBDecimales.Size = new System.Drawing.Size(25, 20);
             this.textBDecimales.TabIndex = 63;
@@ -318,7 +338,7 @@ namespace PseudoGen
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(784, 67);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(903, 111);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(15, 15);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -332,7 +352,7 @@ namespace PseudoGen
             this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(836, 67);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(955, 111);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(15, 15);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -369,52 +389,51 @@ namespace PseudoGen
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnN,
             this.ColumnXn,
             this.ColumnXnSig,
             this.ColumnNums});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.DarkGray;
-            this.dataGridView1.Location = new System.Drawing.Point(344, 63);
+            this.dataGridView1.Location = new System.Drawing.Point(422, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(533, 297);
+            this.dataGridView1.Size = new System.Drawing.Size(573, 375);
             this.dataGridView1.TabIndex = 48;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ColumnN
             // 
@@ -456,14 +475,16 @@ namespace PseudoGen
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.FlatButtonTestCheck);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.flatButtonSmirnovCheck);
             this.panel2.Controls.Add(this.FlatButtonPromCheck);
-            this.panel2.Location = new System.Drawing.Point(344, 387);
+            this.panel2.Controls.Add(this.flatButtonSmirnovCheck);
+            this.panel2.Location = new System.Drawing.Point(422, 504);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(533, 174);
+            this.panel2.Size = new System.Drawing.Size(573, 174);
             this.panel2.TabIndex = 58;
             // 
             // panel3
@@ -471,9 +492,9 @@ namespace PseudoGen
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(-1, -1);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(533, 30);
+            this.panel3.Size = new System.Drawing.Size(554, 30);
             this.panel3.TabIndex = 0;
             // 
             // label2
@@ -493,7 +514,6 @@ namespace PseudoGen
             this.flatButtonSmirnovCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.flatButtonSmirnovCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flatButtonSmirnovCheck.BorderRadius = 0;
-            this.flatButtonSmirnovCheck.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flatButtonSmirnovCheck.ButtonText = "";
             this.flatButtonSmirnovCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flatButtonSmirnovCheck.DisabledColor = System.Drawing.Color.Gray;
@@ -509,13 +529,13 @@ namespace PseudoGen
             this.flatButtonSmirnovCheck.IconVisible = false;
             this.flatButtonSmirnovCheck.IconZoom = 90D;
             this.flatButtonSmirnovCheck.IsTab = false;
-            this.flatButtonSmirnovCheck.Location = new System.Drawing.Point(-2, 101);
+            this.flatButtonSmirnovCheck.Location = new System.Drawing.Point(0, 100);
             this.flatButtonSmirnovCheck.Name = "flatButtonSmirnovCheck";
             this.flatButtonSmirnovCheck.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.flatButtonSmirnovCheck.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.flatButtonSmirnovCheck.OnHoverTextColor = System.Drawing.Color.White;
             this.flatButtonSmirnovCheck.selected = false;
-            this.flatButtonSmirnovCheck.Size = new System.Drawing.Size(530, 60);
+            this.flatButtonSmirnovCheck.Size = new System.Drawing.Size(554, 60);
             this.flatButtonSmirnovCheck.TabIndex = 17;
             this.flatButtonSmirnovCheck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.flatButtonSmirnovCheck.Textcolor = System.Drawing.Color.White;
@@ -544,13 +564,14 @@ namespace PseudoGen
             this.FlatButtonPromCheck.IconVisible = false;
             this.FlatButtonPromCheck.IconZoom = 90D;
             this.FlatButtonPromCheck.IsTab = false;
-            this.FlatButtonPromCheck.Location = new System.Drawing.Point(-2, 35);
+            this.FlatButtonPromCheck.Location = new System.Drawing.Point(0, 35);
+            this.FlatButtonPromCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FlatButtonPromCheck.Name = "FlatButtonPromCheck";
             this.FlatButtonPromCheck.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.FlatButtonPromCheck.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.FlatButtonPromCheck.OnHoverTextColor = System.Drawing.SystemColors.ButtonFace;
             this.FlatButtonPromCheck.selected = false;
-            this.FlatButtonPromCheck.Size = new System.Drawing.Size(530, 60);
+            this.FlatButtonPromCheck.Size = new System.Drawing.Size(554, 60);
             this.FlatButtonPromCheck.TabIndex = 0;
             this.FlatButtonPromCheck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.FlatButtonPromCheck.Textcolor = System.Drawing.Color.White;
@@ -561,7 +582,7 @@ namespace PseudoGen
             // imageErrorLimite
             // 
             this.imageErrorLimite.Image = ((System.Drawing.Image)(resources.GetObject("imageErrorLimite.Image")));
-            this.imageErrorLimite.Location = new System.Drawing.Point(265, 415);
+            this.imageErrorLimite.Location = new System.Drawing.Point(335, 454);
             this.imageErrorLimite.Name = "imageErrorLimite";
             this.imageErrorLimite.Size = new System.Drawing.Size(28, 28);
             this.imageErrorLimite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -572,7 +593,7 @@ namespace PseudoGen
             // OkImageX0
             // 
             this.OkImageX0.Image = ((System.Drawing.Image)(resources.GetObject("OkImageX0.Image")));
-            this.OkImageX0.Location = new System.Drawing.Point(264, 95);
+            this.OkImageX0.Location = new System.Drawing.Point(334, 134);
             this.OkImageX0.Name = "OkImageX0";
             this.OkImageX0.Size = new System.Drawing.Size(28, 28);
             this.OkImageX0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -583,7 +604,7 @@ namespace PseudoGen
             // ErrorImageX0
             // 
             this.ErrorImageX0.Image = ((System.Drawing.Image)(resources.GetObject("ErrorImageX0.Image")));
-            this.ErrorImageX0.Location = new System.Drawing.Point(265, 95);
+            this.ErrorImageX0.Location = new System.Drawing.Point(335, 134);
             this.ErrorImageX0.Name = "ErrorImageX0";
             this.ErrorImageX0.Size = new System.Drawing.Size(28, 28);
             this.ErrorImageX0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -594,7 +615,7 @@ namespace PseudoGen
             // OkImageA
             // 
             this.OkImageA.Image = ((System.Drawing.Image)(resources.GetObject("OkImageA.Image")));
-            this.OkImageA.Location = new System.Drawing.Point(265, 175);
+            this.OkImageA.Location = new System.Drawing.Point(335, 214);
             this.OkImageA.Name = "OkImageA";
             this.OkImageA.Size = new System.Drawing.Size(28, 28);
             this.OkImageA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -605,7 +626,7 @@ namespace PseudoGen
             // ErrorImageA
             // 
             this.ErrorImageA.Image = ((System.Drawing.Image)(resources.GetObject("ErrorImageA.Image")));
-            this.ErrorImageA.Location = new System.Drawing.Point(265, 175);
+            this.ErrorImageA.Location = new System.Drawing.Point(335, 214);
             this.ErrorImageA.Name = "ErrorImageA";
             this.ErrorImageA.Size = new System.Drawing.Size(28, 28);
             this.ErrorImageA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -616,7 +637,7 @@ namespace PseudoGen
             // ErrorImageC
             // 
             this.ErrorImageC.Image = ((System.Drawing.Image)(resources.GetObject("ErrorImageC.Image")));
-            this.ErrorImageC.Location = new System.Drawing.Point(265, 255);
+            this.ErrorImageC.Location = new System.Drawing.Point(335, 294);
             this.ErrorImageC.Name = "ErrorImageC";
             this.ErrorImageC.Size = new System.Drawing.Size(28, 28);
             this.ErrorImageC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -627,7 +648,7 @@ namespace PseudoGen
             // OkImageC
             // 
             this.OkImageC.Image = ((System.Drawing.Image)(resources.GetObject("OkImageC.Image")));
-            this.OkImageC.Location = new System.Drawing.Point(265, 255);
+            this.OkImageC.Location = new System.Drawing.Point(335, 294);
             this.OkImageC.Name = "OkImageC";
             this.OkImageC.Size = new System.Drawing.Size(28, 28);
             this.OkImageC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -638,7 +659,7 @@ namespace PseudoGen
             // ErrorImageM
             // 
             this.ErrorImageM.Image = ((System.Drawing.Image)(resources.GetObject("ErrorImageM.Image")));
-            this.ErrorImageM.Location = new System.Drawing.Point(265, 335);
+            this.ErrorImageM.Location = new System.Drawing.Point(335, 374);
             this.ErrorImageM.Name = "ErrorImageM";
             this.ErrorImageM.Size = new System.Drawing.Size(28, 28);
             this.ErrorImageM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -649,7 +670,7 @@ namespace PseudoGen
             // OkImageM
             // 
             this.OkImageM.Image = ((System.Drawing.Image)(resources.GetObject("OkImageM.Image")));
-            this.OkImageM.Location = new System.Drawing.Point(265, 335);
+            this.OkImageM.Location = new System.Drawing.Point(335, 374);
             this.OkImageM.Name = "OkImageM";
             this.OkImageM.Size = new System.Drawing.Size(28, 28);
             this.OkImageM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -678,10 +699,26 @@ namespace PseudoGen
             this.panel4.Controls.Add(this.TextboxX0);
             this.panel4.Controls.Add(this.bunifuCustomLabel3);
             this.panel4.Controls.Add(this.bunifuCustomLabel4);
-            this.panel4.Location = new System.Drawing.Point(6, 17);
+            this.panel4.Controls.Add(this.panel8);
+            this.panel4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(26, 56);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(252, 544);
+            this.panel4.Size = new System.Drawing.Size(303, 622);
             this.panel4.TabIndex = 59;
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuCustomLabel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Arial", 12F);
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(303, 39);
+            this.bunifuCustomLabel8.TabIndex = 41;
+            this.bunifuCustomLabel8.Text = "Prueba Kolmogorov-Smirnov:";
+            this.bunifuCustomLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuCustomLabel8.Click += new System.EventHandler(this.bunifuCustomLabel8_Click);
             // 
             // comboBAlfa
             // 
@@ -698,10 +735,11 @@ namespace PseudoGen
             "5%",
             "10%",
             "20%"});
-            this.comboBAlfa.Location = new System.Drawing.Point(110, 463);
+            this.comboBAlfa.Location = new System.Drawing.Point(110, 541);
             this.comboBAlfa.Name = "comboBAlfa";
             this.comboBAlfa.Size = new System.Drawing.Size(142, 21);
             this.comboBAlfa.TabIndex = 40;
+            this.comboBAlfa.Text = "20%";
             // 
             // bunifuCustomLabel7
             // 
@@ -709,7 +747,7 @@ namespace PseudoGen
             this.bunifuCustomLabel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Arial", 12F);
             this.bunifuCustomLabel7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(0, 463);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(0, 541);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(99, 18);
             this.bunifuCustomLabel7.TabIndex = 39;
@@ -722,21 +760,21 @@ namespace PseudoGen
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(252, 40);
+            this.panel1.Size = new System.Drawing.Size(303, 40);
             this.panel1.TabIndex = 19;
             // 
             // bunifuCustomLabel5
             // 
-            this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.bunifuCustomLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Arial Narrow", 15F);
             this.bunifuCustomLabel5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(73, 10);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(0, 0);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(95, 24);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(303, 40);
             this.bunifuCustomLabel5.TabIndex = 18;
             this.bunifuCustomLabel5.Text = "Parámetros";
-            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelErrorLimite
             // 
@@ -745,9 +783,9 @@ namespace PseudoGen
             this.labelErrorLimite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.labelErrorLimite.Location = new System.Drawing.Point(3, 430);
             this.labelErrorLimite.Name = "labelErrorLimite";
-            this.labelErrorLimite.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorLimite.Size = new System.Drawing.Size(161, 16);
             this.labelErrorLimite.TabIndex = 38;
-            this.labelErrorLimite.Text = "Por favor, escribe un número entero.";
+            this.labelErrorLimite.Text = "Escribe un número entero.";
             this.labelErrorLimite.Visible = false;
             // 
             // TextBoxLimitar
@@ -768,7 +806,7 @@ namespace PseudoGen
             this.TextBoxLimitar.Location = new System.Drawing.Point(6, 398);
             this.TextBoxLimitar.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxLimitar.Name = "TextBoxLimitar";
-            this.TextBoxLimitar.Size = new System.Drawing.Size(246, 28);
+            this.TextBoxLimitar.Size = new System.Drawing.Size(297, 28);
             this.TextBoxLimitar.TabIndex = 35;
             this.TextBoxLimitar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBoxLimitar.OnValueChanged += new System.EventHandler(this.TextBoxLimitar_OnValueChanged);
@@ -780,9 +818,9 @@ namespace PseudoGen
             this.checkBoxLimitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBoxLimitar.Location = new System.Drawing.Point(6, 378);
             this.checkBoxLimitar.Name = "checkBoxLimitar";
-            this.checkBoxLimitar.Size = new System.Drawing.Size(225, 22);
+            this.checkBoxLimitar.Size = new System.Drawing.Size(177, 22);
             this.checkBoxLimitar.TabIndex = 34;
-            this.checkBoxLimitar.Text = "Limitar cantidad de números";
+            this.checkBoxLimitar.Text = "Cantidad de números";
             this.checkBoxLimitar.UseVisualStyleBackColor = true;
             this.checkBoxLimitar.CheckedChanged += new System.EventHandler(this.checkBoxLimitar_CheckedChanged);
             // 
@@ -793,9 +831,9 @@ namespace PseudoGen
             this.labelErrorM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.labelErrorM.Location = new System.Drawing.Point(3, 349);
             this.labelErrorM.Name = "labelErrorM";
-            this.labelErrorM.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorM.Size = new System.Drawing.Size(161, 16);
             this.labelErrorM.TabIndex = 31;
-            this.labelErrorM.Text = "Por favor, escribe un número entero.";
+            this.labelErrorM.Text = "Escribe un número entero.";
             this.labelErrorM.Visible = false;
             // 
             // labelErrorC
@@ -805,9 +843,9 @@ namespace PseudoGen
             this.labelErrorC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.labelErrorC.Location = new System.Drawing.Point(3, 270);
             this.labelErrorC.Name = "labelErrorC";
-            this.labelErrorC.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorC.Size = new System.Drawing.Size(161, 16);
             this.labelErrorC.TabIndex = 30;
-            this.labelErrorC.Text = "Por favor, escribe un número entero.";
+            this.labelErrorC.Text = "Escribe un número entero.";
             this.labelErrorC.Visible = false;
             // 
             // labelErrorA
@@ -817,9 +855,9 @@ namespace PseudoGen
             this.labelErrorA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.labelErrorA.Location = new System.Drawing.Point(3, 190);
             this.labelErrorA.Name = "labelErrorA";
-            this.labelErrorA.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorA.Size = new System.Drawing.Size(161, 16);
             this.labelErrorA.TabIndex = 29;
-            this.labelErrorA.Text = "Por favor, escribe un número entero.";
+            this.labelErrorA.Text = "Escribe un número entero.";
             this.labelErrorA.Visible = false;
             // 
             // ButGenerar
@@ -841,11 +879,11 @@ namespace PseudoGen
             this.ButGenerar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.ButGenerar.IdleForecolor = System.Drawing.SystemColors.ButtonFace;
             this.ButGenerar.IdleLineColor = System.Drawing.SystemColors.ButtonFace;
-            this.ButGenerar.Location = new System.Drawing.Point(0, 494);
+            this.ButGenerar.Location = new System.Drawing.Point(0, 572);
             this.ButGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButGenerar.Name = "ButGenerar";
             this.ButGenerar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ButGenerar.Size = new System.Drawing.Size(252, 50);
+            this.ButGenerar.Size = new System.Drawing.Size(303, 50);
             this.ButGenerar.TabIndex = 2;
             this.ButGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ButGenerar.Click += new System.EventHandler(this.ButGenerar_Click);
@@ -857,9 +895,9 @@ namespace PseudoGen
             this.labelErrorX0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.labelErrorX0.Location = new System.Drawing.Point(0, 110);
             this.labelErrorX0.Name = "labelErrorX0";
-            this.labelErrorX0.Size = new System.Drawing.Size(216, 16);
+            this.labelErrorX0.Size = new System.Drawing.Size(161, 16);
             this.labelErrorX0.TabIndex = 28;
-            this.labelErrorX0.Text = "Por favor, escribe un número entero.";
+            this.labelErrorX0.Text = "Escribe un número entero.";
             this.labelErrorX0.Visible = false;
             // 
             // TextBoxA
@@ -879,7 +917,7 @@ namespace PseudoGen
             this.TextBoxA.Location = new System.Drawing.Point(3, 158);
             this.TextBoxA.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxA.Name = "TextBoxA";
-            this.TextBoxA.Size = new System.Drawing.Size(249, 28);
+            this.TextBoxA.Size = new System.Drawing.Size(300, 28);
             this.TextBoxA.TabIndex = 8;
             this.TextBoxA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBoxA.OnValueChanged += new System.EventHandler(this.TextBoxA_OnValueChanged);
@@ -901,7 +939,7 @@ namespace PseudoGen
             this.TextBoxM.Location = new System.Drawing.Point(3, 318);
             this.TextBoxM.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxM.Name = "TextBoxM";
-            this.TextBoxM.Size = new System.Drawing.Size(249, 28);
+            this.TextBoxM.Size = new System.Drawing.Size(300, 28);
             this.TextBoxM.TabIndex = 9;
             this.TextBoxM.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBoxM.OnValueChanged += new System.EventHandler(this.TextBoxM_OnValueChanged);
@@ -923,7 +961,7 @@ namespace PseudoGen
             this.TextBoxC.Location = new System.Drawing.Point(3, 238);
             this.TextBoxC.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxC.Name = "TextBoxC";
-            this.TextBoxC.Size = new System.Drawing.Size(249, 28);
+            this.TextBoxC.Size = new System.Drawing.Size(300, 28);
             this.TextBoxC.TabIndex = 10;
             this.TextBoxC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBoxC.OnValueChanged += new System.EventHandler(this.TextBoxC_OnValueChanged);
@@ -969,7 +1007,7 @@ namespace PseudoGen
             this.TextboxX0.Location = new System.Drawing.Point(3, 78);
             this.TextboxX0.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxX0.Name = "TextboxX0";
-            this.TextboxX0.Size = new System.Drawing.Size(249, 28);
+            this.TextboxX0.Size = new System.Drawing.Size(300, 28);
             this.TextboxX0.TabIndex = 13;
             this.TextboxX0.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextboxX0.OnValueChanged += new System.EventHandler(this.TextboxX0_OnValueChanged);
@@ -998,35 +1036,135 @@ namespace PseudoGen
             this.bunifuCustomLabel4.TabIndex = 15;
             this.bunifuCustomLabel4.Text = "m";
             // 
+            // bunifuCustomLabel10
+            // 
+            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Arial Narrow", 15F);
+            this.bunifuCustomLabel10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(422, 56);
+            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(573, 40);
+            this.bunifuCustomLabel10.TabIndex = 66;
+            this.bunifuCustomLabel10.Text = "Números";
+            this.bunifuCustomLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.Black;
-            this.tabPage2.Controls.Add(this.tableBloodTest5);
+            this.tabPage2.Controls.Add(this.panel7);
+            this.tabPage2.Controls.Add(this.bunifuCustomLabel11);
             this.tabPage2.Controls.Add(this.tableBloodTest4);
             this.tabPage2.Controls.Add(this.tableBloodTest3);
             this.tabPage2.Controls.Add(this.tableBloodTest2);
             this.tabPage2.Controls.Add(this.tableBloodTest1);
             this.tabPage2.Font = new System.Drawing.Font("Wingdings 3", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(892, 574);
+            this.tabPage2.Size = new System.Drawing.Size(1016, 709);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Pruebas de sangre";
             // 
-            // tableBloodTest5
+            // panel7
             // 
-            this.tableBloodTest5.AutoSize = true;
-            this.tableBloodTest5.DataSource = null;
-            this.tableBloodTest5.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.tableBloodTest5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tableBloodTest5.Location = new System.Drawing.Point(10, 1492);
-            this.tableBloodTest5.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.tableBloodTest5.Name = "tableBloodTest5";
-            this.tableBloodTest5.Size = new System.Drawing.Size(860, 360);
-            this.tableBloodTest5.TabIndex = 4;
-            this.tableBloodTest5.Zona = 5;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(80)))));
+            this.panel7.Controls.Add(this.labelConclusionBloodTest);
+            this.panel7.Location = new System.Drawing.Point(12, 1112);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(979, 30);
+            this.panel7.TabIndex = 21;
+            // 
+            // labelConclusionBloodTest
+            // 
+            this.labelConclusionBloodTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelConclusionBloodTest.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelConclusionBloodTest.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelConclusionBloodTest.Location = new System.Drawing.Point(0, 0);
+            this.labelConclusionBloodTest.Name = "labelConclusionBloodTest";
+            this.labelConclusionBloodTest.Size = new System.Drawing.Size(979, 30);
+            this.labelConclusionBloodTest.TabIndex = 0;
+            this.labelConclusionBloodTest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel11
+            // 
+            this.bunifuCustomLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Arial Narrow", 15F);
+            this.bunifuCustomLabel11.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(8, 3);
+            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(984, 40);
+            this.bunifuCustomLabel11.TabIndex = 20;
+            this.bunifuCustomLabel11.Text = "Pruebas de sangre";
+            this.bunifuCustomLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.AutoScroll = true;
+            this.tabPage3.BackColor = System.Drawing.Color.Black;
+            this.tabPage3.Controls.Add(this.bunifuCustomLabel12);
+            this.tabPage3.Controls.Add(this.tableWaterTest1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1016, 709);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Muestras de agua";
+            // 
+            // bunifuCustomLabel12
+            // 
+            this.bunifuCustomLabel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel12.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(3, 3);
+            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(1010, 40);
+            this.bunifuCustomLabel12.TabIndex = 21;
+            this.bunifuCustomLabel12.Text = "Muestras de agua";
+            this.bunifuCustomLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.bunifuCustomLabel8);
+            this.panel8.Location = new System.Drawing.Point(0, 496);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(303, 39);
+            this.panel8.TabIndex = 42;
+            // 
+            // FlatButtonTestCheck
+            // 
+            this.FlatButtonTestCheck.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.FlatButtonTestCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.FlatButtonTestCheck.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FlatButtonTestCheck.BorderRadius = 0;
+            this.FlatButtonTestCheck.ButtonText = "";
+            this.FlatButtonTestCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FlatButtonTestCheck.DisabledColor = System.Drawing.Color.Gray;
+            this.FlatButtonTestCheck.Iconcolor = System.Drawing.Color.Transparent;
+            this.FlatButtonTestCheck.Iconimage = ((System.Drawing.Image)(resources.GetObject("FlatButtonTestCheck.Iconimage")));
+            this.FlatButtonTestCheck.Iconimage_right = null;
+            this.FlatButtonTestCheck.Iconimage_right_Selected = null;
+            this.FlatButtonTestCheck.Iconimage_Selected = null;
+            this.FlatButtonTestCheck.IconMarginLeft = 0;
+            this.FlatButtonTestCheck.IconMarginRight = 0;
+            this.FlatButtonTestCheck.IconRightVisible = false;
+            this.FlatButtonTestCheck.IconRightZoom = 0D;
+            this.FlatButtonTestCheck.IconVisible = false;
+            this.FlatButtonTestCheck.IconZoom = 90D;
+            this.FlatButtonTestCheck.IsTab = false;
+            this.FlatButtonTestCheck.Location = new System.Drawing.Point(0, 167);
+            this.FlatButtonTestCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FlatButtonTestCheck.Name = "FlatButtonTestCheck";
+            this.FlatButtonTestCheck.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.FlatButtonTestCheck.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.FlatButtonTestCheck.OnHoverTextColor = System.Drawing.Color.White;
+            this.FlatButtonTestCheck.selected = false;
+            this.FlatButtonTestCheck.Size = new System.Drawing.Size(554, 60);
+            this.FlatButtonTestCheck.TabIndex = 18;
+            this.FlatButtonTestCheck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FlatButtonTestCheck.Textcolor = System.Drawing.Color.White;
+            this.FlatButtonTestCheck.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FlatButtonTestCheck.Visible = false;
             // 
             // tableBloodTest4
             // 
@@ -1034,10 +1172,10 @@ namespace PseudoGen
             this.tableBloodTest4.DataSource = null;
             this.tableBloodTest4.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.tableBloodTest4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tableBloodTest4.Location = new System.Drawing.Point(10, 1126);
+            this.tableBloodTest4.Location = new System.Drawing.Point(11, 846);
             this.tableBloodTest4.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.tableBloodTest4.Name = "tableBloodTest4";
-            this.tableBloodTest4.Size = new System.Drawing.Size(860, 360);
+            this.tableBloodTest4.Size = new System.Drawing.Size(980, 260);
             this.tableBloodTest4.TabIndex = 3;
             this.tableBloodTest4.Zona = 4;
             // 
@@ -1047,10 +1185,10 @@ namespace PseudoGen
             this.tableBloodTest3.DataSource = null;
             this.tableBloodTest3.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.tableBloodTest3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tableBloodTest3.Location = new System.Drawing.Point(10, 760);
+            this.tableBloodTest3.Location = new System.Drawing.Point(12, 580);
             this.tableBloodTest3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.tableBloodTest3.Name = "tableBloodTest3";
-            this.tableBloodTest3.Size = new System.Drawing.Size(860, 360);
+            this.tableBloodTest3.Size = new System.Drawing.Size(980, 260);
             this.tableBloodTest3.TabIndex = 2;
             this.tableBloodTest3.Zona = 3;
             // 
@@ -1060,10 +1198,10 @@ namespace PseudoGen
             this.tableBloodTest2.DataSource = null;
             this.tableBloodTest2.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.tableBloodTest2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tableBloodTest2.Location = new System.Drawing.Point(9, 394);
+            this.tableBloodTest2.Location = new System.Drawing.Point(12, 314);
             this.tableBloodTest2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.tableBloodTest2.Name = "tableBloodTest2";
-            this.tableBloodTest2.Size = new System.Drawing.Size(860, 360);
+            this.tableBloodTest2.Size = new System.Drawing.Size(980, 260);
             this.tableBloodTest2.TabIndex = 1;
             this.tableBloodTest2.Zona = 2;
             // 
@@ -1073,41 +1211,31 @@ namespace PseudoGen
             this.tableBloodTest1.DataSource = null;
             this.tableBloodTest1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableBloodTest1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tableBloodTest1.Location = new System.Drawing.Point(9, 26);
+            this.tableBloodTest1.Location = new System.Drawing.Point(12, 47);
             this.tableBloodTest1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableBloodTest1.Name = "tableBloodTest1";
-            this.tableBloodTest1.Size = new System.Drawing.Size(860, 332);
+            this.tableBloodTest1.Size = new System.Drawing.Size(980, 260);
             this.tableBloodTest1.TabIndex = 0;
             this.tableBloodTest1.Zona = 1;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.AutoScroll = true;
-            this.tabPage3.BackColor = System.Drawing.Color.Black;
-            this.tabPage3.Controls.Add(this.tableWaterTest1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(892, 574);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            // 
             // tableWaterTest1
             // 
-            this.tableWaterTest1.Dia = "Lunes";
-            this.tableWaterTest1.Location = new System.Drawing.Point(26, 28);
+            this.tableWaterTest1.DataSource = null;
+            this.tableWaterTest1.Dia = 1;
+            this.tableWaterTest1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableWaterTest1.Location = new System.Drawing.Point(0, 47);
+            this.tableWaterTest1.Margin = new System.Windows.Forms.Padding(4);
             this.tableWaterTest1.Name = "tableWaterTest1";
             this.tableWaterTest1.Semana = 1;
-            this.tableWaterTest1.Size = new System.Drawing.Size(800, 619);
+            this.tableWaterTest1.Size = new System.Drawing.Size(1024, 750);
             this.tableWaterTest1.TabIndex = 0;
-            this.tableWaterTest1.Load += new System.EventHandler(this.tableWaterTest1_Load);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(900, 630);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.menuBarPanel);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1115,7 +1243,6 @@ namespace PseudoGen
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.butCerrar)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1126,6 +1253,7 @@ namespace PseudoGen
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.okImageLimite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -1147,10 +1275,11 @@ namespace PseudoGen
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1160,8 +1289,6 @@ namespace PseudoGen
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem jhjToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem1;
         private System.Windows.Forms.Panel menuBarPanel;
         private Bunifu.Framework.UI.BunifuImageButton butMinimizar;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -1218,11 +1345,20 @@ namespace PseudoGen
         private System.Windows.Forms.TabPage tabPage2;
         private design.Controls.TableBloodTest tableBloodTest1;
         private design.Controls.TableBloodTest tableBloodTest2;
-        private design.Controls.TableBloodTest tableBloodTest5;
         private design.Controls.TableBloodTest tableBloodTest4;
         private design.Controls.TableBloodTest tableBloodTest3;
         private System.Windows.Forms.TabPage tabPage3;
         private design.Controls.TableWaterTest tableWaterTest1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
+        private System.Windows.Forms.Panel panel6;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label labelConclusionBloodTest;
+        private System.Windows.Forms.Panel panel8;
+        private Bunifu.Framework.UI.BunifuFlatButton FlatButtonTestCheck;
     }
 }
 

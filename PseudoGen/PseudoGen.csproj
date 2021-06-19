@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="calc\EnumDays.cs" />
     <Compile Include="calc\Tests\BloodTest\BloodTest.cs" />
     <Compile Include="calc\Tests\BloodTest\DataTableBloodTest.cs" />
     <Compile Include="calc\DistribucionTriangular.cs" />
@@ -82,6 +83,9 @@
     <Compile Include="calc\Tests\WaterTest\DataTableWaterTest.cs" />
     <Compile Include="calc\randomNumbers\proofs\KolmogorovSmirnov.cs" />
     <Compile Include="calc\Tests\WaterTest\WaterTest.cs" />
+    <Compile Include="design\Controls\QlibComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="design\Controls\TableBloodTest.cs">
       <SubType>UserControl</SubType>
     </Compile>

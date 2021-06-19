@@ -1,4 +1,5 @@
 ﻿using Bunifu.Framework.UI;
+using PseudoGen.calc;
 using PseudoGen.calc.randomNumbers.proofs;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,9 @@ namespace PseudoGen
 
             InitializeComponent();
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new PSAGenColorTable());
-
+            FlatButtonPromCheck.IconVisible = true;
+            flatButtonSmirnovCheck.IconVisible = true;
+            FlatButtonTestCheck.IconVisible = true;
             textBDecimales.Text = "4";
            
 
@@ -290,12 +293,14 @@ namespace PseudoGen
                     Smirnov = new KolmogorovSmirnov(Gen,limite);
                 else Smirnov = new KolmogorovSmirnov(Gen, m);
 
+                /*
                 for (int i = 0; i < Gen.Nums.Length - 1; i++)
                     dataGridView1.Rows.Add(i, Gen.Rows[i, 0], Gen.Rows[i, 1], Math.Round(Gen.Rows[i, 2], 7));
 
                 if (dataGridView1.Rows.Count < 12)
                     dataGridView1.Rows.Add(12 - dataGridView1.Rows.Count);
-
+                */
+                SetDecimals();
 
                 FlatButtonPromCheck.Visible = true;
                 flatButtonSmirnovCheck.Visible = true;
@@ -326,37 +331,59 @@ namespace PseudoGen
 
 
 
-                //////////////////Generación de la tabla de pruebas de sangre
+                //////////////////Generación de las tablas de pruebas de sangre
                 tableBloodTest1.DataSource = new calc.DataTableBloodTest(Gen,1);
                 tableBloodTest2.DataSource = new calc.DataTableBloodTest(Gen, 2);
                 tableBloodTest3.DataSource = new calc.DataTableBloodTest(Gen, 3);
                 tableBloodTest4.DataSource = new calc.DataTableBloodTest(Gen, 4);
-                tableBloodTest5.DataSource = new calc.DataTableBloodTest(Gen, 5);
+                int cantidadAptas=0;
+                if (tableBloodTest1.DataSource.Conclusion == BloodTest.APTA)
+                    cantidadAptas++;
+                if (tableBloodTest2.DataSource.Conclusion == BloodTest.APTA)
+                    cantidadAptas++;
+                if (tableBloodTest3.DataSource.Conclusion == BloodTest.APTA)
+                    cantidadAptas++;
+                if (tableBloodTest4.DataSource.Conclusion == BloodTest.APTA)
+                    cantidadAptas++;
+
+                FlatButtonTestCheck.Visible = true;
+                if (cantidadAptas >= 2)
+                {
+                    labelConclusionBloodTest.Text = BloodTest.APTA;
+                    FlatButtonTestCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\ok_48px.png"));
+                    FlatButtonTestCheck.Text = BloodTest.APTA;
+                }
+                else
+                {
+                    labelConclusionBloodTest.Text = BloodTest.NO_APTA;
+                    FlatButtonTestCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\cancel_48px.png"));
+                    FlatButtonTestCheck.Text = BloodTest.NO_APTA;
+                }
+                    
+
+
+                /////////////////Generación de las tablas de pruebas de agua
+
+                tableWaterTest1.DataSource = new calc.Tests.WaterTest.ContainerDataTableWaterTests(Gen);
+
+
+
+
+
+
+
 
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show("Los datos introducidos están incompletos o incorrectos, asegurese de insertar números enteros y rellenar todos los campos requeridos. ");
-                MessageBox.Show(ex.Message+"\n\n"+ ex.StackTrace);
+                MessageBox.Show("Los datos introducidos están incompletos o incorrectos, asegurese de insertar números enteros y rellenar todos los campos requeridos. "+"\n\nMensaje: "+ex.Message);
+               
             }
 
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
+   
 
         private void flatButtonSmirnovCheck_Click(object sender, EventArgs e)
         {
@@ -364,6 +391,12 @@ namespace PseudoGen
             smirnovMetodo.Show();
             smirnovMetodo.Disposed += smirnovWindow_Dispose;
         }
+
+        private void bunifuCustomLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void smirnovWindow_Dispose(object sender, EventArgs e)
         {
             comboBAlfa.Text = Smirnov.Alfa.ToString() + "%";
@@ -375,20 +408,7 @@ namespace PseudoGen
 
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-           
-        }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tableWaterTest1_Load(object sender, EventArgs e)
-        {
-
-        }
 
 
 
@@ -401,11 +421,8 @@ namespace PseudoGen
           
 
         }
-        //Abre la ventana de detalles del método de los promedios
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            //Aqí mandas a abrir tu form de detalle pruebas 
-        }
+   
+     
 
 
         //Abre la exportación de datos a excel

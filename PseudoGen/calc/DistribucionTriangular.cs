@@ -34,7 +34,7 @@ namespace PseudoGen.calc
             {
                 return x = c - Math.Sqrt((c-b)*(c-a)*(1-r));
             }
-            return 0.0;
+          
         }
        
     }

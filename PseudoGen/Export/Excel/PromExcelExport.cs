@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Excel1 = Microsoft.Office.Interop.Excel;
+
 using System.Reflection;
 
 namespace PseudoGen.Export.Excel
 {
     class PromExcelExport
     {
-        Excel1.Application oXL;
-        Excel1._Workbook oWB;
-        Excel1._Worksheet oSheet;
-        Excel1.Range oRng;
+
+        Microsoft.Office.Interop.Excel.Application oXL;
+        Microsoft.Office.Interop.Excel._Workbook oWB;
+        Microsoft.Office.Interop.Excel._Worksheet oSheet;
+        Microsoft.Office.Interop.Excel.Range oRng;
         Generador Gen;
 
         public PromExcelExport(Generador gen)
@@ -22,13 +25,22 @@ namespace PseudoGen.Export.Excel
         }
         public void OpenWindow()
         {
-            bool completed = false;
-            oXL = new Excel1.Application();
-            oXL.Visible = true;
-            oXL.Width=600;
-            oXL.Height = 500;
-            oWB = (Excel1._Workbook)(oXL.Workbooks.Add(Missing.Value));
-            oSheet = (Excel1._Worksheet)oWB.ActiveSheet;
+            
+            
+
+
+          
+                bool completed = false;
+                oXL = new Excel1.Application();
+                oXL.Visible = true;
+                oXL.Width = 600;
+                oXL.Height = 500;
+                oWB = (Excel1._Workbook)(oXL.Workbooks.Add(Missing.Value));
+                oSheet = (Excel1._Worksheet)oWB.ActiveSheet;
+            
+            
+            
+            
 
             while (!completed)
             {
