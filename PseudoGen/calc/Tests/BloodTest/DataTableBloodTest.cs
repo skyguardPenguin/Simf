@@ -64,6 +64,47 @@ namespace PseudoGen.calc
                     k++;
                 }
             }
+
+            Dictionary<int, string> nombres = new Dictionary<int, string>();
+            nombres.Add(0,BloodTest.ACIDEZ);
+            nombres.Add(1, BloodTest.ANEMIA);
+            nombres.Add(2, BloodTest.NORMAL);
+            nombres.Add(3, BloodTest.GLUCOSA);
+            nombres.Add(4, BloodTest.ALCALINIDAD);
+
+            Dictionary<int, int> cantidades = new Dictionary<int, int>();
+            cantidades.Add(0, nAcidez);
+            cantidades.Add(1, nAnemia);
+            cantidades.Add(2, nNormal);
+            cantidades.Add(3, nGlucosa);
+            cantidades.Add(4, nAlcalinidad);
+
+          
+            int mayor = nAcidez;
+
+            string mayorString = nombres[0];
+            for (int i = 1; i < cantidades.Count; i++)
+            {
+                if (cantidades[i] > mayor)
+                {
+                    mayor = cantidades[i];
+                    mayorString = nombres[i];
+            
+                }
+                else if (cantidades[i] == mayor)
+                {
+                    mayorString += ", " + nombres[i];
+               
+
+                }
+            }
+            
+            ResultadoMFrecuente = mayorString;
+            if (mayorString == BloodTest.NORMAL)
+                Conclusion = BloodTest.APTA;
+            else
+                Conclusion = BloodTest.NO_APTA;
+            /*
             if (nAcidez > nAnemia && nAcidez > nNormal && nAcidez > nGlucosa && nAcidez > nAlcalinidad)
             {
                 Conclusion = BloodTest.NO_APTA;ResultadoMFrecuente = BloodTest.ACIDEZ;
@@ -85,7 +126,7 @@ namespace PseudoGen.calc
                 Conclusion = BloodTest.NO_APTA; ResultadoMFrecuente = BloodTest.ALCALINIDAD;
             }
 
-
+            */
 
         }
         

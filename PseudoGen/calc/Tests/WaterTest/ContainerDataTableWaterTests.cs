@@ -24,7 +24,7 @@ namespace PseudoGen.calc.Tests.WaterTest
         public int nFosfatos = 0;
         public int nOxidos = 0;
 
-        public string ResultadoMFrecuente="ERROR";
+        public string ResultadoMFrecuente="";
 
         public ContainerDataTableWaterTests(Generador gen)
         {
@@ -47,7 +47,44 @@ namespace PseudoGen.calc.Tests.WaterTest
                 nFosfatos += DataTables[i].nFosfatos;
                 nOxidos += DataTables[i].nOxidos;
             }
+            Dictionary<int, string> nombres= new Dictionary<int, string>();
+            nombres.Add(0, WaterTest.COLOIDALES);
+            nombres.Add(1, WaterTest.MERCURIO);
+            nombres.Add(2, WaterTest.PETROQUIMICOS);
+            nombres.Add(3, WaterTest.SULFATOS);
+            nombres.Add(4, WaterTest.ACIDO);
+            nombres.Add(5, WaterTest.FOSFATOS);
+            nombres.Add(6, WaterTest.OXIDOS);
 
+            Dictionary<int, int> cantidades= new Dictionary<int, int>();
+            cantidades.Add(0, nColoidales);
+            cantidades.Add(1, nMercurio);
+            cantidades.Add(2, nPetroquimicos);
+            cantidades.Add(3, nSulfatos);
+            cantidades.Add(4, nAcido);
+            cantidades.Add(5, nFosfatos);
+            cantidades.Add(6, nOxidos);
+
+            int mayor=nColoidales;
+            
+            string mayorString=nombres[0];
+            for (int i= 1;i<cantidades.Count;i++)
+            {
+                if(cantidades[i]>mayor)
+                {
+                    mayor =cantidades[i];
+                    mayorString = nombres[i];
+                    
+                }
+                else if(cantidades[i]==mayor)
+                {
+                    mayorString += ", "+ nombres[i];
+                 
+                    
+                }
+            }
+            ResultadoMFrecuente = mayorString;
+            /*
             if (nColoidales > nMercurio && nColoidales > nPetroquimicos && nColoidales > nSulfatos && nColoidales > nAcido && nColoidales > nFosfatos && nColoidales > nOxidos)
             {
                 ResultadoMFrecuente = WaterTest.COLOIDALES;
@@ -77,8 +114,12 @@ namespace PseudoGen.calc.Tests.WaterTest
             {
                 ResultadoMFrecuente = WaterTest.OXIDOS;
             }
+            else
+            {
 
-           
+            }
+
+           */
         }
 
 

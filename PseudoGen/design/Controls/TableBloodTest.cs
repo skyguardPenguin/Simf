@@ -133,6 +133,7 @@ namespace PseudoGen.design.Controls
             labelResMes4.Text = resData[3];
             labelResMes5.Text = resData[4];
 
+           
             labelConclusion.Text = dataSource.Conclusion + ", el resultado más frecuente fue: " + dataSource.ResultadoMFrecuente;
 
 

@@ -349,15 +349,15 @@ namespace PseudoGen
                 FlatButtonTestCheck.Visible = true;
                 if (cantidadAptas >= 2)
                 {
-                    labelConclusionBloodTest.Text = BloodTest.APTA;
+                    labelConclusionBloodTest.Text = BloodTest.MANTOS_APTOS;
                     FlatButtonTestCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\ok_48px.png"));
-                    FlatButtonTestCheck.Text = BloodTest.APTA;
+                    FlatButtonTestCheck.Text = BloodTest.MANTOS_APTOS +". Click para ver detalles.";
                 }
                 else
                 {
                     labelConclusionBloodTest.Text = BloodTest.NO_APTA;
                     FlatButtonTestCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\cancel_48px.png"));
-                    FlatButtonTestCheck.Text = BloodTest.NO_APTA;
+                    FlatButtonTestCheck.Text = BloodTest.MANTOS_NO_APTOS +". Click para ver detalles.";
                 }
                     
 
@@ -395,6 +395,11 @@ namespace PseudoGen
         private void bunifuCustomLabel8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FlatButtonTestCheck_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
         }
 
         private void smirnovWindow_Dispose(object sender, EventArgs e)

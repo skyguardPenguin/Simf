@@ -31,10 +31,10 @@ namespace PseudoGen
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.butCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,8 +60,6 @@ namespace PseudoGen
             this.ColumnXnSig = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNums = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.flatButtonSmirnovCheck = new Bunifu.Framework.UI.BunifuFlatButton();
             this.FlatButtonPromCheck = new Bunifu.Framework.UI.BunifuFlatButton();
             this.imageErrorLimite = new System.Windows.Forms.PictureBox();
@@ -109,6 +107,8 @@ namespace PseudoGen
             this.tableBloodTest2 = new PseudoGen.design.Controls.TableBloodTest();
             this.tableBloodTest1 = new PseudoGen.design.Controls.TableBloodTest();
             this.tableWaterTest1 = new PseudoGen.design.Controls.TableWaterTest();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.butCerrar)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.menuBarPanel.SuspendLayout();
@@ -123,7 +123,6 @@ namespace PseudoGen
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageErrorLimite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OkImageX0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorImageX0)).BeginInit();
@@ -139,6 +138,7 @@ namespace PseudoGen
             this.panel7.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // butCerrar
@@ -263,6 +263,7 @@ namespace PseudoGen
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Black;
             this.tabPage1.Controls.Add(this.panel6);
+            this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.okImageLimite);
             this.tabPage1.Controls.Add(this.textBDecimales);
             this.tabPage1.Controls.Add(this.bunifuImageButton2);
@@ -389,47 +390,47 @@ namespace PseudoGen
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnN,
             this.ColumnXn,
             this.ColumnXnSig,
             this.ColumnNums});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.DarkGray;
             this.dataGridView1.Location = new System.Drawing.Point(422, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 40;
             this.dataGridView1.Size = new System.Drawing.Size(573, 375);
@@ -479,34 +480,12 @@ namespace PseudoGen
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.FlatButtonTestCheck);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.FlatButtonPromCheck);
             this.panel2.Controls.Add(this.flatButtonSmirnovCheck);
-            this.panel2.Location = new System.Drawing.Point(422, 504);
+            this.panel2.Location = new System.Drawing.Point(422, 518);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(573, 174);
+            this.panel2.Size = new System.Drawing.Size(573, 163);
             this.panel2.TabIndex = 58;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(554, 30);
-            this.panel3.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mensajes";
             // 
             // flatButtonSmirnovCheck
             // 
@@ -529,7 +508,7 @@ namespace PseudoGen
             this.flatButtonSmirnovCheck.IconVisible = false;
             this.flatButtonSmirnovCheck.IconZoom = 90D;
             this.flatButtonSmirnovCheck.IsTab = false;
-            this.flatButtonSmirnovCheck.Location = new System.Drawing.Point(0, 100);
+            this.flatButtonSmirnovCheck.Location = new System.Drawing.Point(0, 67);
             this.flatButtonSmirnovCheck.Name = "flatButtonSmirnovCheck";
             this.flatButtonSmirnovCheck.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.flatButtonSmirnovCheck.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -564,8 +543,8 @@ namespace PseudoGen
             this.FlatButtonPromCheck.IconVisible = false;
             this.FlatButtonPromCheck.IconZoom = 90D;
             this.FlatButtonPromCheck.IsTab = false;
-            this.FlatButtonPromCheck.Location = new System.Drawing.Point(0, 35);
-            this.FlatButtonPromCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FlatButtonPromCheck.Location = new System.Drawing.Point(0, 3);
+            this.FlatButtonPromCheck.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.FlatButtonPromCheck.Name = "FlatButtonPromCheck";
             this.FlatButtonPromCheck.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.FlatButtonPromCheck.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -1070,9 +1049,9 @@ namespace PseudoGen
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(80)))));
             this.panel7.Controls.Add(this.labelConclusionBloodTest);
-            this.panel7.Location = new System.Drawing.Point(12, 1112);
+            this.panel7.Location = new System.Drawing.Point(11, 1107);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(979, 30);
+            this.panel7.Size = new System.Drawing.Size(979, 40);
             this.panel7.TabIndex = 21;
             // 
             // labelConclusionBloodTest
@@ -1082,7 +1061,7 @@ namespace PseudoGen
             this.labelConclusionBloodTest.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelConclusionBloodTest.Location = new System.Drawing.Point(0, 0);
             this.labelConclusionBloodTest.Name = "labelConclusionBloodTest";
-            this.labelConclusionBloodTest.Size = new System.Drawing.Size(979, 30);
+            this.labelConclusionBloodTest.Size = new System.Drawing.Size(979, 40);
             this.labelConclusionBloodTest.TabIndex = 0;
             this.labelConclusionBloodTest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1152,7 +1131,7 @@ namespace PseudoGen
             this.FlatButtonTestCheck.IconVisible = false;
             this.FlatButtonTestCheck.IconZoom = 90D;
             this.FlatButtonTestCheck.IsTab = false;
-            this.FlatButtonTestCheck.Location = new System.Drawing.Point(0, 167);
+            this.FlatButtonTestCheck.Location = new System.Drawing.Point(0, 134);
             this.FlatButtonTestCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FlatButtonTestCheck.Name = "FlatButtonTestCheck";
             this.FlatButtonTestCheck.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -1165,6 +1144,7 @@ namespace PseudoGen
             this.FlatButtonTestCheck.Textcolor = System.Drawing.Color.White;
             this.FlatButtonTestCheck.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FlatButtonTestCheck.Visible = false;
+            this.FlatButtonTestCheck.Click += new System.EventHandler(this.FlatButtonTestCheck_Click);
             // 
             // tableBloodTest4
             // 
@@ -1227,8 +1207,29 @@ namespace PseudoGen
             this.tableWaterTest1.Margin = new System.Windows.Forms.Padding(4);
             this.tableWaterTest1.Name = "tableWaterTest1";
             this.tableWaterTest1.Semana = 1;
-            this.tableWaterTest1.Size = new System.Drawing.Size(1024, 750);
+            this.tableWaterTest1.Size = new System.Drawing.Size(1024, 800);
             this.tableWaterTest1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(3, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mensajes";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(422, 488);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(573, 30);
+            this.panel3.TabIndex = 0;
             // 
             // MainWindow
             // 
@@ -1261,8 +1262,6 @@ namespace PseudoGen
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageErrorLimite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OkImageX0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorImageX0)).EndInit();
@@ -1280,6 +1279,8 @@ namespace PseudoGen
             this.panel7.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1329,8 +1330,6 @@ namespace PseudoGen
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnXnSig;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNums;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton flatButtonSmirnovCheck;
         private Bunifu.Framework.UI.BunifuFlatButton FlatButtonPromCheck;
         private System.Windows.Forms.PictureBox imageErrorLimite;
@@ -1359,6 +1358,8 @@ namespace PseudoGen
         private System.Windows.Forms.Label labelConclusionBloodTest;
         private System.Windows.Forms.Panel panel8;
         private Bunifu.Framework.UI.BunifuFlatButton FlatButtonTestCheck;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

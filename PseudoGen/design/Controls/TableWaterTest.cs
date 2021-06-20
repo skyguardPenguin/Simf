@@ -29,7 +29,7 @@ namespace PseudoGen.design.Controls
                 {
                
                     RefreshCombos();
-
+                    Clear();
                     labelConclusion.Text ="La sustancia encontrada con mayor frecuencia durante las 2 semanas es: "+ value.ResultadoMFrecuente;
                 }
              
@@ -81,6 +81,7 @@ namespace PseudoGen.design.Controls
                 }
             }
         }
+
 
         public TableWaterTest()
         {
@@ -172,7 +173,14 @@ namespace PseudoGen.design.Controls
             
         }
 
-
+        public void Clear()
+        {
+            for(int i=0;i<8;i++)
+            {
+                for(int j=0;j<20;j++)
+                    Labels[i,j].Text = "";
+            }
+        }
         private void qlibComboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             foreach (char element in qlibComboBox1.Text.ToCharArray())

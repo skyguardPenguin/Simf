@@ -56,7 +56,6 @@ namespace PseudoGen.design.Controls
             this.label22 = new System.Windows.Forms.Label();
             this.labelResMes3 = new System.Windows.Forms.Label();
             this.labelRMes3 = new System.Windows.Forms.Label();
-            this.labelRes2Semanas3 = new System.Windows.Forms.Label();
             this.labelR2Semanas3 = new System.Windows.Forms.Label();
             this.labelResInicio3 = new System.Windows.Forms.Label();
             this.labelRInicio3 = new System.Windows.Forms.Label();
@@ -84,6 +83,7 @@ namespace PseudoGen.design.Controls
             this.panel5 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label42 = new System.Windows.Forms.Label();
@@ -91,8 +91,8 @@ namespace PseudoGen.design.Controls
             this.label43 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label44 = new System.Windows.Forms.Label();
+            this.labelRes2Semanas3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label40 = new System.Windows.Forms.Label();
             label41 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -297,7 +297,6 @@ namespace PseudoGen.design.Controls
             this.labelResMes5.Name = "labelResMes5";
             this.labelResMes5.Size = new System.Drawing.Size(77, 63);
             this.labelResMes5.TabIndex = 53;
-            this.labelResMes5.Text = "label35";
             this.labelResMes5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRMes5
@@ -308,7 +307,6 @@ namespace PseudoGen.design.Controls
             this.labelRMes5.Name = "labelRMes5";
             this.labelRMes5.Size = new System.Drawing.Size(61, 63);
             this.labelRMes5.TabIndex = 52;
-            this.labelRMes5.Text = "label34";
             this.labelRMes5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRes2Semanas5
@@ -330,7 +328,6 @@ namespace PseudoGen.design.Controls
             this.labelR2Semanas5.Name = "labelR2Semanas5";
             this.labelR2Semanas5.Size = new System.Drawing.Size(61, 63);
             this.labelR2Semanas5.TabIndex = 50;
-            this.labelR2Semanas5.Text = "label32";
             this.labelR2Semanas5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelResInicio5
@@ -341,18 +338,16 @@ namespace PseudoGen.design.Controls
             this.labelResInicio5.Name = "labelResInicio5";
             this.labelResInicio5.Size = new System.Drawing.Size(77, 63);
             this.labelResInicio5.TabIndex = 49;
-            this.labelResInicio5.Text = "label31";
             this.labelResInicio5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRInicio5
             // 
-            this.labelRInicio5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelRInicio5.AutoSize = true;
-            this.labelRInicio5.Location = new System.Drawing.Point(147, 378);
+            this.labelRInicio5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRInicio5.Location = new System.Drawing.Point(144, 355);
             this.labelRInicio5.Name = "labelRInicio5";
-            this.labelRInicio5.Size = new System.Drawing.Size(54, 16);
+            this.labelRInicio5.Size = new System.Drawing.Size(61, 63);
             this.labelRInicio5.TabIndex = 48;
-            this.labelRInicio5.Text = "label30";
+            this.labelRInicio5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label29
             // 
@@ -374,7 +369,6 @@ namespace PseudoGen.design.Controls
             this.labelResMes4.Name = "labelResMes4";
             this.labelResMes4.Size = new System.Drawing.Size(77, 58);
             this.labelResMes4.TabIndex = 46;
-            this.labelResMes4.Text = "label28";
             this.labelResMes4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRMes4
@@ -385,7 +379,6 @@ namespace PseudoGen.design.Controls
             this.labelRMes4.Name = "labelRMes4";
             this.labelRMes4.Size = new System.Drawing.Size(61, 58);
             this.labelRMes4.TabIndex = 45;
-            this.labelRMes4.Text = "label27";
             this.labelRMes4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRes2Semanas4
@@ -407,7 +400,6 @@ namespace PseudoGen.design.Controls
             this.labelR2Semanas4.Name = "labelR2Semanas4";
             this.labelR2Semanas4.Size = new System.Drawing.Size(61, 58);
             this.labelR2Semanas4.TabIndex = 43;
-            this.labelR2Semanas4.Text = "label25";
             this.labelR2Semanas4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelResInicio4
@@ -418,7 +410,6 @@ namespace PseudoGen.design.Controls
             this.labelResInicio4.Name = "labelResInicio4";
             this.labelResInicio4.Size = new System.Drawing.Size(77, 58);
             this.labelResInicio4.TabIndex = 42;
-            this.labelResInicio4.Text = "label24";
             this.labelResInicio4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRInicio4
@@ -429,7 +420,6 @@ namespace PseudoGen.design.Controls
             this.labelRInicio4.Name = "labelRInicio4";
             this.labelRInicio4.Size = new System.Drawing.Size(61, 58);
             this.labelRInicio4.TabIndex = 41;
-            this.labelRInicio4.Text = "label23";
             this.labelRInicio4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label22
@@ -452,7 +442,6 @@ namespace PseudoGen.design.Controls
             this.labelResMes3.Name = "labelResMes3";
             this.labelResMes3.Size = new System.Drawing.Size(77, 58);
             this.labelResMes3.TabIndex = 39;
-            this.labelResMes3.Text = "label21";
             this.labelResMes3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRMes3
@@ -463,19 +452,7 @@ namespace PseudoGen.design.Controls
             this.labelRMes3.Name = "labelRMes3";
             this.labelRMes3.Size = new System.Drawing.Size(61, 58);
             this.labelRMes3.TabIndex = 38;
-            this.labelRMes3.Text = "label20";
             this.labelRMes3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRes2Semanas3
-            // 
-            this.labelRes2Semanas3.AutoSize = true;
-            this.labelRes2Semanas3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRes2Semanas3.Location = new System.Drawing.Point(364, 237);
-            this.labelRes2Semanas3.Name = "labelRes2Semanas3";
-            this.labelRes2Semanas3.Size = new System.Drawing.Size(77, 58);
-            this.labelRes2Semanas3.TabIndex = 37;
-            this.labelRes2Semanas3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelRes2Semanas3.Click += new System.EventHandler(this.labelRes2Semanas3_Click);
             // 
             // labelR2Semanas3
             // 
@@ -485,7 +462,6 @@ namespace PseudoGen.design.Controls
             this.labelR2Semanas3.Name = "labelR2Semanas3";
             this.labelR2Semanas3.Size = new System.Drawing.Size(61, 58);
             this.labelR2Semanas3.TabIndex = 36;
-            this.labelR2Semanas3.Text = "label18";
             this.labelR2Semanas3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelResInicio3
@@ -496,7 +472,6 @@ namespace PseudoGen.design.Controls
             this.labelResInicio3.Name = "labelResInicio3";
             this.labelResInicio3.Size = new System.Drawing.Size(77, 58);
             this.labelResInicio3.TabIndex = 35;
-            this.labelResInicio3.Text = "label17";
             this.labelResInicio3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRInicio3
@@ -507,7 +482,6 @@ namespace PseudoGen.design.Controls
             this.labelRInicio3.Name = "labelRInicio3";
             this.labelRInicio3.Size = new System.Drawing.Size(61, 58);
             this.labelRInicio3.TabIndex = 34;
-            this.labelRInicio3.Text = "label16";
             this.labelRInicio3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
@@ -530,7 +504,6 @@ namespace PseudoGen.design.Controls
             this.labelResMes2.Name = "labelResMes2";
             this.labelResMes2.Size = new System.Drawing.Size(77, 58);
             this.labelResMes2.TabIndex = 32;
-            this.labelResMes2.Text = "label14";
             this.labelResMes2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRMes2
@@ -541,7 +514,6 @@ namespace PseudoGen.design.Controls
             this.labelRMes2.Name = "labelRMes2";
             this.labelRMes2.Size = new System.Drawing.Size(61, 58);
             this.labelRMes2.TabIndex = 31;
-            this.labelRMes2.Text = "label13";
             this.labelRMes2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRes2Semanas2
@@ -562,7 +534,6 @@ namespace PseudoGen.design.Controls
             this.labelR2Semanas2.Name = "labelR2Semanas2";
             this.labelR2Semanas2.Size = new System.Drawing.Size(61, 58);
             this.labelR2Semanas2.TabIndex = 29;
-            this.labelR2Semanas2.Text = "label11";
             this.labelR2Semanas2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelResInicio2
@@ -573,7 +544,6 @@ namespace PseudoGen.design.Controls
             this.labelResInicio2.Name = "labelResInicio2";
             this.labelResInicio2.Size = new System.Drawing.Size(77, 58);
             this.labelResInicio2.TabIndex = 28;
-            this.labelResInicio2.Text = "label10";
             this.labelResInicio2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRInicio2
@@ -584,7 +554,6 @@ namespace PseudoGen.design.Controls
             this.labelRInicio2.Name = "labelRInicio2";
             this.labelRInicio2.Size = new System.Drawing.Size(61, 58);
             this.labelRInicio2.TabIndex = 27;
-            this.labelRInicio2.Text = "label9";
             this.labelRInicio2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -607,7 +576,6 @@ namespace PseudoGen.design.Controls
             this.labelResMes1.Name = "labelResMes1";
             this.labelResMes1.Size = new System.Drawing.Size(77, 58);
             this.labelResMes1.TabIndex = 25;
-            this.labelResMes1.Text = "label7";
             this.labelResMes1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRMes1
@@ -618,7 +586,6 @@ namespace PseudoGen.design.Controls
             this.labelRMes1.Name = "labelRMes1";
             this.labelRMes1.Size = new System.Drawing.Size(61, 58);
             this.labelRMes1.TabIndex = 24;
-            this.labelRMes1.Text = "label6";
             this.labelRMes1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelRes2Semanas1
@@ -629,7 +596,6 @@ namespace PseudoGen.design.Controls
             this.labelRes2Semanas1.Name = "labelRes2Semanas1";
             this.labelRes2Semanas1.Size = new System.Drawing.Size(77, 58);
             this.labelRes2Semanas1.TabIndex = 23;
-            this.labelRes2Semanas1.Text = "label5";
             this.labelRes2Semanas1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelR2Semanas1
@@ -640,7 +606,6 @@ namespace PseudoGen.design.Controls
             this.labelR2Semanas1.Name = "labelR2Semanas1";
             this.labelR2Semanas1.Size = new System.Drawing.Size(61, 58);
             this.labelR2Semanas1.TabIndex = 22;
-            this.labelR2Semanas1.Text = "label4";
             this.labelR2Semanas1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelResInicio1
@@ -651,7 +616,6 @@ namespace PseudoGen.design.Controls
             this.labelResInicio1.Name = "labelResInicio1";
             this.labelResInicio1.Size = new System.Drawing.Size(77, 58);
             this.labelResInicio1.TabIndex = 21;
-            this.labelResInicio1.Text = "label3";
             this.labelResInicio1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -713,8 +677,6 @@ namespace PseudoGen.design.Controls
             this.labelConclusion.Name = "labelConclusion";
             this.labelConclusion.Size = new System.Drawing.Size(106, 299);
             this.labelConclusion.TabIndex = 0;
-            this.labelConclusion.Text = "label1";
-            this.labelConclusion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -747,7 +709,6 @@ namespace PseudoGen.design.Controls
             this.labelRInicio1.Name = "labelRInicio1";
             this.labelRInicio1.Size = new System.Drawing.Size(61, 58);
             this.labelRInicio1.TabIndex = 19;
-            this.labelRInicio1.Text = "label1";
             this.labelRInicio1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
@@ -785,6 +746,19 @@ namespace PseudoGen.design.Controls
             this.tableLayoutPanel1.SetRowSpan(this.panel2, 2);
             this.panel2.Size = new System.Drawing.Size(139, 117);
             this.panel2.TabIndex = 57;
+            // 
+            // label40
+            // 
+            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label40.Font = new System.Drawing.Font("Verdana", 12F);
+            this.label40.Location = new System.Drawing.Point(0, 0);
+            this.label40.Margin = new System.Windows.Forms.Padding(0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(139, 117);
+            this.label40.TabIndex = 2;
+            this.label40.Text = "Resultado de análisis de sangre";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
@@ -874,23 +848,21 @@ namespace PseudoGen.design.Controls
             this.label44.Text = "Conclusión";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelRes2Semanas3
+            // 
+            this.labelRes2Semanas3.AutoSize = true;
+            this.labelRes2Semanas3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRes2Semanas3.Location = new System.Drawing.Point(364, 237);
+            this.labelRes2Semanas3.Name = "labelRes2Semanas3";
+            this.labelRes2Semanas3.Size = new System.Drawing.Size(77, 58);
+            this.labelRes2Semanas3.TabIndex = 37;
+            this.labelRes2Semanas3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRes2Semanas3.Click += new System.EventHandler(this.labelRes2Semanas3_Click);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label40
-            // 
-            this.label40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label40.Font = new System.Drawing.Font("Verdana", 12F);
-            this.label40.Location = new System.Drawing.Point(0, 0);
-            this.label40.Margin = new System.Windows.Forms.Padding(0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(139, 117);
-            this.label40.TabIndex = 2;
-            this.label40.Text = "Resultado de análisis de sangre";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TableBloodTest
             // 
