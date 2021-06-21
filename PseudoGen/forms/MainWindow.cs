@@ -1,5 +1,6 @@
 ﻿using Bunifu.Framework.UI;
 using PseudoGen.calc;
+using PseudoGen.calc.manzanas.Tests.weatherTest;
 using PseudoGen.calc.randomNumbers.proofs;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace PseudoGen
             flatButtonSmirnovCheck.IconVisible = true;
             FlatButtonTestCheck.IconVisible = true;
             textBDecimales.Text = "4";
-           
+         
 
         }
     #region MainBar
@@ -368,8 +369,10 @@ namespace PseudoGen
 
 
 
+                //Individual
+                DataTableWeatherTest dataSourceW = new DataTableWeatherTest(Gen);
 
-
+                
 
 
 
@@ -440,7 +443,10 @@ namespace PseudoGen
 
    
 
-       
+       private void RefreshWeatherTable()
+       {
+          
+       }
 
     }
 }

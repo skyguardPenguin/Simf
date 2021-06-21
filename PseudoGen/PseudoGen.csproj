@@ -75,28 +75,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="calc\EnumDays.cs" />
-    <Compile Include="calc\Tests\BloodTest\BloodTest.cs" />
-    <Compile Include="calc\Tests\BloodTest\DataTableBloodTest.cs" />
+    <Compile Include="calc\mantosFreaticos\Tests\BloodTest\BloodTest.cs" />
+    <Compile Include="calc\mantosFreaticos\Tests\BloodTest\DataTableBloodTest.cs" />
     <Compile Include="calc\DistribucionTriangular.cs" />
-    <Compile Include="calc\Tests\Range.cs" />
-    <Compile Include="calc\Tests\WaterTest\ContainerDataTableWaterTests.cs" />
-    <Compile Include="calc\Tests\WaterTest\DataTableWaterTest.cs" />
+    <Compile Include="calc\manzanas\Tests\weatherTest\DataTableWeatherTest.cs" />
+    <Compile Include="calc\manzanas\Tests\weatherTest\WeatherTest.cs" />
+    <Compile Include="calc\Range.cs" />
+    <Compile Include="calc\mantosFreaticos\Tests\WaterTest\ContainerDataTableWaterTests.cs" />
+    <Compile Include="calc\mantosFreaticos\Tests\WaterTest\DataTableWaterTest.cs" />
     <Compile Include="calc\randomNumbers\proofs\KolmogorovSmirnov.cs" />
-    <Compile Include="calc\Tests\WaterTest\WaterTest.cs" />
-    <Compile Include="design\Controls\QlibComboBox.cs">
+    <Compile Include="calc\mantosFreaticos\Tests\WaterTest\WaterTest.cs" />
+    <Compile Include="design\Controls\mantosFreaticos\QlibComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="design\Controls\TableBloodTest.cs">
+    <Compile Include="design\Controls\mantosFreaticos\TableBloodTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="design\Controls\TableBloodTest.Designer.cs">
+    <Compile Include="design\Controls\mantosFreaticos\TableBloodTest.Designer.cs">
       <DependentUpon>TableBloodTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="design\Controls\TableWaterTest.cs">
+    <Compile Include="design\Controls\mantosFreaticos\TableWaterTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="design\Controls\TableWaterTest.Designer.cs">
+    <Compile Include="design\Controls\mantosFreaticos\TableWaterTest.Designer.cs">
       <DependentUpon>TableWaterTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="design\Controls\manzanas\TableClima.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="design\Controls\manzanas\TableClima.Designer.cs">
+      <DependentUpon>TableClima.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\proofs\DetallePromedios.cs">
       <SubType>Form</SubType>
@@ -122,11 +130,14 @@
     <Compile Include="forms\proofs\DetalleKolmogorovSmirnov.Designer.cs">
       <DependentUpon>DetalleKolmogorovSmirnov.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="design\Controls\TableBloodTest.resx">
+    <EmbeddedResource Include="design\Controls\mantosFreaticos\TableBloodTest.resx">
       <DependentUpon>TableBloodTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="design\Controls\TableWaterTest.resx">
+    <EmbeddedResource Include="design\Controls\mantosFreaticos\TableWaterTest.resx">
       <DependentUpon>TableWaterTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="design\Controls\manzanas\TableClima.resx">
+      <DependentUpon>TableClima.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\proofs\DetallePromedios.resx">
       <DependentUpon>DetallePromedios.cs</DependentUpon>
@@ -219,5 +230,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

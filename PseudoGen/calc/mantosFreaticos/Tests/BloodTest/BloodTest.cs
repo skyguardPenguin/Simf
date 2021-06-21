@@ -28,6 +28,8 @@ namespace PseudoGen.calc
         public const string NO_APTA = "Este punto no es apto para que los animales beban agua";
         public const string MANTOS_APTOS= "El agua de los mantos freáticos es apta para seguir siendo empleada por los animales";
         public const string MANTOS_NO_APTOS = "El agua de los mantos freáticos no es apta para el consumo animal";
+
+
         public static Dictionary<string, double> ProbEnfermedades = new Dictionary<string, double>();
         public static List<string> Enfermedades = new List<string>();
         public static List<double> Probabilidades = new List<double>();
@@ -63,11 +65,7 @@ namespace PseudoGen.calc
                 Rangos.Add(new Range(inf,cuenta,Probabilidades[i]));
             }
         }
-        public BloodTest(Generador generador)
-        {
-            Gen = generador;
-
-        }
+    
 
         public static string GetPointState(double ri)
         {
