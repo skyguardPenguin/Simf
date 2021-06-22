@@ -31,9 +31,13 @@ namespace PseudoGen.calc.manzanas.Tests.wheaterTest
         public Generador Gen;
 
         //Conclusiones
-        public static string OPC_VENDER = "Vender toda su mercancía en este momento con una ganancia segura del 30%";
-        public static string OPC_ESPERAR = "Esperar dos semanas con la posibilidad de obtener una ganancia del 70% si el clima no mejora, y la posibilidad de tener una pérdida del 10% si el clima mejora.";
+        public const string OPC_VENDER = "Vender toda su mercancía en este momento con una ganancia segura del 30%";
+        public const string OPC_ESPERAR = "Esperar dos semanas con la posibilidad de obtener una ganancia del 70% si el clima no mejora, y la posibilidad de tener una pérdida del 10% si el clima mejora.";
 
+        public const string VENDIO="Después de vender las manzanas antes del plazo de 2 semanas, el precio por caja es de: ";
+        public const string ESPERO = "Después de esperar a que se cumpla el plazo de 2 semanas para vender, el precio por caja es de: ";
+
+        public const string CLIMA = "Según los resultados de la simulación, el porcentaje de años en los que el clima mejoró en un lapso menor a 2 semanas es:  ";
 
 
         static WeatherTest()

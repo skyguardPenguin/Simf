@@ -30,7 +30,7 @@ namespace PseudoGen
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new PSAGenColorTable());
             FlatButtonPromCheck.IconVisible = true;
             flatButtonSmirnovCheck.IconVisible = true;
-            FlatButtonTestCheck.IconVisible = true;
+            FlatButtonAppleCheck.IconVisible = true;
             textBDecimales.Text = "4";
          
 
@@ -333,6 +333,8 @@ namespace PseudoGen
 
 
                 //////////////////Generación de las tablas de pruebas de sangre
+                ////*
+                /*              
                 tableBloodTest1.DataSource = new calc.DataTableBloodTest(Gen,1);
                 tableBloodTest2.DataSource = new calc.DataTableBloodTest(Gen, 2);
                 tableBloodTest3.DataSource = new calc.DataTableBloodTest(Gen, 3);
@@ -360,20 +362,45 @@ namespace PseudoGen
                     FlatButtonTestCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\cancel_48px.png"));
                     FlatButtonTestCheck.Text = BloodTest.MANTOS_NO_APTOS +". Click para ver detalles.";
                 }
+                */
                     
 
 
                 /////////////////Generación de las tablas de pruebas de agua
-
-                tableWaterTest1.DataSource = new calc.Tests.WaterTest.ContainerDataTableWaterTests(Gen);
+                
+                //tableWaterTest1.DataSource = new calc.Tests.WaterTest.ContainerDataTableWaterTests(Gen);
 
 
 
                 //Individual
+
                 DataTableWeatherTest dataSourceW = new DataTableWeatherTest(Gen);
+                label3D.Text = dataSourceW.nD3.ToString() + " veces";
+                label5D.Text = dataSourceW.nD5.ToString() + " veces";
+                label8D.Text = dataSourceW.nD8.ToString() + " veces";
+                label10D.Text = dataSourceW.nD10.ToString() + " veces";
+                label14D.Text = dataSourceW.nD14.ToString() + " veces";
+                label16D.Text = dataSourceW.nD16.ToString() + " veces";
 
+                dataGridView2.Rows.Clear();
+                for (int i = 0; i < 50; i++)
+                    dataGridView2.Rows.Add(i, dataSourceW.Ri[i], dataSourceW.Result[i]);
+                labelConclusionClima.Text = dataSourceW.ConclusionClima;
+                labelConclusionVenta.Text = dataSourceW.ConclusionEleccion+"\n"+ dataSourceW.ConclusionFinal;
+
+                FlatButtonAppleCheck.Visible = true;
                 
+                FlatButtonAppleCheck.Text = "El precio por caja resultante es: "+ dataSourceW.precioVenta.ToString();
+              
+                if (dataSourceW.precioVenta==135)
+                {
+                     FlatButtonAppleCheck.Iconimage =new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\cancel_48px.png"));
+                }
+                else
+                {
+                    FlatButtonAppleCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\ok_48px.png"));
 
+                }
 
 
             }
@@ -402,7 +429,7 @@ namespace PseudoGen
 
         private void FlatButtonTestCheck_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage2;
+            tabControl1.SelectedTab = tabPage4;
         }
 
         private void smirnovWindow_Dispose(object sender, EventArgs e)
@@ -413,6 +440,16 @@ namespace PseudoGen
                 flatButtonSmirnovCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\cancel_48px.png"));
             else
                 flatButtonSmirnovCheck.Iconimage = new Bitmap(Image.FromFile(@"C:\Users\sinoa\source\repos\Simulacion\PseudoGen\PseudoGen\PseudoGen\images\png\ok_48px.png"));
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel15_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
